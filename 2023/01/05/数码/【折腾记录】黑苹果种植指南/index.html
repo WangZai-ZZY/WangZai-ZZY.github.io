@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="x5-fullscreen" content="true">
+<meta name="full-screen" content="yes">
+<meta name="theme-color" content="#317EFB" />
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=0" name="viewport">
+<meta name="description" content="折腾黑苹果的理由有很多，但究其根本，还是源于 Mac 设备高昂的价格与极高的试错成本。不过遗憾的是，随着 Apple 投向 ARM 的怀抱发布了 M1 芯片，黑苹果的死期已在无声中划定。所以一句话，且折腾且珍惜。 由于我不再对苹果生态抱有念想，所以继续使用黑苹果已经意义不大，再加上重装 Windows 后 OpenCore 引导出现了问题，大概率只能格盘重装，于是借此机会坦然下车了。（不过文中的">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【折腾记录】黑苹果种植指南">
+<meta property="og:url" content="https://www.shinotak.com/2023/01/05/%E6%95%B0%E7%A0%81/%E3%80%90%E6%8A%98%E8%85%BE%E8%AE%B0%E5%BD%95%E3%80%91%E9%BB%91%E8%8B%B9%E6%9E%9C%E7%A7%8D%E6%A4%8D%E6%8C%87%E5%8D%97/index.html">
+<meta property="og:site_name" content="无闻沙洲">
+<meta property="og:description" content="折腾黑苹果的理由有很多，但究其根本，还是源于 Mac 设备高昂的价格与极高的试错成本。不过遗憾的是，随着 Apple 投向 ARM 的怀抱发布了 M1 芯片，黑苹果的死期已在无声中划定。所以一句话，且折腾且珍惜。 由于我不再对苹果生态抱有念想，所以继续使用黑苹果已经意义不大，再加上重装 Windows 后 OpenCore 引导出现了问题，大概率只能格盘重装，于是借此机会坦然下车了。（不过文中的">
+<meta property="og:locale">
+<meta property="article:published_time" content="2023-01-05T13:00:00.000Z">
+<meta property="article:modified_time" content="2023-01-10T09:52:07.173Z">
+<meta property="article:author" content="汪崽zzy">
+<meta name="twitter:card" content="summary">
+
+
+<title >【折腾记录】黑苹果种植指南</title>
+
+<!-- Favicon -->
+
+    <link href='/img/favicon/favicon-16x16.png?v=2.1.10' rel='icon' type='image/png' sizes='16x16' ></link>
+
+
+    <link href='/img/favicon/favicon-32x32.png?v=2.1.10' rel='icon' type='image/png' sizes='32x32' ></link>
+
+
+    <link href='/img/favicon/apple-touch-icon.png?v=2.1.10' rel='apple-touch-icon' sizes='180x180' ></link>
+
+
+    <link href='/img/favicon/site.webmanifest' rel='manifest' ></link>
+
+
+<!-- Plugin -->
+
+
+
+
+    
+<link rel="stylesheet" href="/css/plugins/bootstrap.row.css">
+
+    
+<link rel="stylesheet" href="https://unpkg.com/@fancyapps/ui@4.0/dist/fancybox.css">
+
+    
+    
+
+
+
+
+<!-- Icon -->
+
+    
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_3549054_n096xdrq7me.css">
+
+
+
+
+<!-- Variable -->
+<script>window.ASYNC_CONFIG = {"hostname":"www.shinotak.com","author":"汪崽zzy","root":"/","typed_text":["但行好事，莫问前程"],"theme_version":"2.1.10","theme":{"switch":true,"default":"style-light"},"favicon":{"logo":"/img/favicon/favicon.png","icon16":"/img/favicon/favicon-16x16.png","icon32":"/img/favicon/favicon-32x32.png","appleTouchIcon":"/img/favicon/apple-touch-icon.png","webmanifest":"/img/favicon/site.webmanifest","visibilitychange":false,"hidden":"/failure.ico","showText":"(/≧▽≦/)咦！又好了！","hideText":"(●—●)喔哟，崩溃啦！"},"i18n":{"placeholder":"搜索文章...","empty":"找不到您查询的内容: ${query}","hits":"找到 ${hits} 条结果","hits_time":"找到 ${hits} 条结果（用时 ${time} 毫秒）","author":"本文作者：","copyright_link":"本文链接：","copyright_license_title":"版权声明：","copyright_license_content":"本博客所有文章除特别声明外，均默认采用 undefined 许可协议。","copy_success":"复制成功","copy_failure":"复制失败","open_read_mode":"进入阅读模式","exit_read_mode":"退出阅读模式","notice_outdate_message":"距离上次更新已经 undefined 天了, 文章内容可能已经过时。","sticky":"置顶","just":"刚刚","min":"分钟前","hour":"小时前","day":"天前","month":"个月前"},"swup":false,"plugin":{"flickr_justified_gallery":"https://unpkg.com/flickr-justified-gallery@latest/dist/fjGallery.min.js"},"icons":{"sun":"iconfont icon-sun","moon":"iconfont icon-moon","play":"iconfont icon-play-circle","email":"iconfont icon-envelope","next":"iconfont icon-arrow-alt-circle-rig","calendar":"iconfont icon-calendar-alt","clock":"iconfont icon-clock","user":"iconfont icon-user1","back_top":"iconfont icon-arrow-alt-circle-up","close":"iconfont icon-times-circle","search":"iconfont icon-search","reward":"iconfont icon-hand-holding-usd","user_tag":"iconfont icon-user","toc_tag":"iconfont icon-th-list","read":"iconfont icon-book-reader","arrows":"iconfont icon-arrows-alt-h","double_arrows":"iconfont icon-angle-double-down","copy":"iconfont icon-copy"},"icontype":"font","highlight":{"plugin":"highlighjs","theme":true,"copy":true,"lang":true,"title":"default","height_limit":200},"toc":{"post_title":true},"live_time":{"start_time":"","prefix":"博客已萌萌哒运行 undefined 天"}};</script>
+<script id="async-page-config">window.PAGE_CONFIG = {"isPost":true,"isHome":false,"postUpdate":"2023-01-10 17:52:07"};</script>
+
+<!-- Theme mode css -->
+<link data-swup-theme rel="stylesheet" href="/css/index.css?v=2.1.10" id="trm-switch-style">
+<script>
+    let defaultMode = ASYNC_CONFIG.theme.default !=='auto' ?  ASYNC_CONFIG.theme.default : (window.matchMedia("(prefers-color-scheme: light)").matches ? 'style-light' : 'style-dark')
+    let catchMode = localStorage.getItem('theme-mode') || defaultMode;
+    let type = catchMode === 'style-dark' ? 'add' : 'remove';
+    document.documentElement.classList[type]('dark')
+</script>
+
+<!-- CDN -->
+
+
+    
+    
+
+
+
+<!-- Site Analytics -->
+ 
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+<body>
+
+  <!-- app wrapper -->
+  <div class="trm-app-frame">
+
+    <!-- page preloader -->
+    <div class="trm-preloader">
+    <div class="trm-holder">
+        <div class="preloader">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+</div>
+    <!-- page preloader end -->
+
+    <!-- change mode preloader -->
+    <div class="trm-mode-swich-animation-frame">
+    <div class="trm-mode-swich-animation">
+        <i class="i-sun"><i class="iconfont iconfont icon-sun"></i></i>
+        <div class="trm-horizon"></div>
+        <i class="i-moon"><i class="iconfont iconfont icon-moon"></i></i>
+    </div>
+</div>
+    <!-- change mode preloader end -->
+
+      <!-- scroll container -->
+      <div id="trm-dynamic-content" class="trm-swup-animation">
+        <div id="trm-scroll-container" class="trm-scroll-container" style="opacity: 0">
+            <!-- top bar -->
+            <header class="trm-top-bar">
+	<div class="container">
+		<div class="trm-left-side">
+			<!-- logo -->
+<a href="/" class="trm-logo-frame trm-anima-link">
+    
+        <img alt="logo" src="/img/favicon/favicon.png">
+    
+    
+        <div class="trm-logo-text">
+            无闻<span>沙洲</span>
+        </div>
+    
+</a>
+<!-- logo end -->
+		</div>
+		<div class="trm-right-side">
+			<!-- menu -->
+<div class="trm-menu">
+    <nav>
+        <ul>
+            
+            <li class="menu-item-has-children ">
+                <a  href="/" target="">
+                    主页
+                </a>
+                
+            </li>
+            
+            <li class="menu-item-has-children ">
+                <a  href="/archives/" target="">
+                    归档
+                </a>
+                
+            </li>
+            
+            <li class="menu-item-has-children ">
+                <a  href="/links/" target="">
+                    链接
+                </a>
+                
+            </li>
+            
+            <li class="menu-item-has-children ">
+                <a  href="/talks/" target="">
+                    呓语
+                </a>
+                
+            </li>
+            
+            <li class="menu-item-has-children ">
+                <a  href="/about/" target="">
+                    关于
+                </a>
+                
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+<!-- menu end -->
+			
+    <!-- mode switcher place -->
+    <div class="trm-mode-switcher-place">
+        <div class="trm-mode-switcher">
+            <i class="iconfont iconfont icon-sun"></i>
+            <input class="tgl tgl-light" id="trm-swich" type="checkbox">
+            <label class="trm-swich" for="trm-swich"></label>
+            <i class="iconfont iconfont icon-moon"></i>
+        </div>
+    </div>
+    <!-- mode switcher place end -->
+
+			
+		</div>
+		<div class="trm-menu-btn">
+			<span></span>
+		</div>
+	</div>
+</header>
+            <!-- top bar end -->
+
+            <!-- body -->
+            
+<div class="trm-content-start">
+    <!-- banner -->
+    <div class="trm-banner">
+    
+    <!-- banner cover -->
+    <img style="object-position:top;object-fit:cover;" alt="banner" class="trm-banner-cover" src="https://s2.loli.net/2023/01/05/oDM23LfeTx5HSaV.jpg">
+    <!-- banner cover end -->
+    
+
+    <!-- banner content -->
+    <div class="trm-banner-content trm-overlay">
+        <div class="container">
+            <div class="row">
+                
+                <div class="col-lg-4"></div>
+                
+                <div class="col-lg-8">
+
+                    <!-- banner title -->
+                    <div class="trm-banner-text ">
+                        <div class="trm-label trm-mb-20">
+                            NEWS LETTER
+                        </div>
+                        <h1 class="trm-mb-30 trm-hsmb-font">
+                            【折腾记录】黑苹果种植指南
+                        </h1>
+
+                        
+                            <ul class="trm-breadcrumbs trm-label">
+                                <li>
+                                    <a href="/" class="trm-anima-link">Home</a>
+                                </li>
+                                <li>
+                                    <span>
+                                        2023
+                                    </span>
+                                </li>
+                            </ul>
+                        
+                    </div>
+                    <!-- banner title end -->
+
+                    <!-- scroll hint -->
+                    <span id="scroll-triger" class="trm-scroll-hint-frame">
+                        <div class="trm-scroll-hint"></div>
+                        <span class="trm-label">Scroll down</span>
+                    </span>
+                    <!-- scroll hint end -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- banner content end -->
+</div>
+    <!-- banner end -->
+    <div class="container">
+        <div class="row">
+            
+                <div class="trm-page-sidebar col-lg-4 hidden-sm">
+                    <!-- main card -->
+                    <div class="trm-main-card-frame trm-sidebar">
+    <div class="trm-main-card"> 
+        <!-- card header -->
+<div class="trm-mc-header">
+    <div class="trm-avatar-frame trm-mb-20">
+        <img alt="Avatar" class="trm-avatar" src="https://s2.loli.net/2022/12/06/rjAGieHp6o9Ks1k.png">
+    </div>
+    <h5 class="trm-name trm-mb-15">
+        无闻沙洲
+    </h5>
+    
+        <div class="trm-label">
+            
+            <span class="trm-typed-text">
+                <!-- Words for theme.user.typedText -->
+            </span>
+        </div>
+    
+</div>
+<!-- card header end -->
+        <!-- sidebar social -->
+
+<div class="trm-divider trm-mb-40 trm-mt-40"></div>
+<div class="trm-social">
+    
+        <a href="https://github.com/WangZai-ZZY" title="Github" rel="nofollow" target="_blank">
+            <i class="iconfont iconfont icon-github"></i>
+        </a>
+    
+        <a href="https://weibo.com/u/7348512128/" title="Weibo" rel="nofollow" target="_blank">
+            <i class="iconfont iconfont icon-weibo-fill"></i>
+        </a>
+    
+        <a href="https://space.bilibili.com/449552577" title="BiliBili" rel="nofollow" target="_blank">
+            <i class="iconfont iconfont icon-bilibili-fill"></i>
+        </a>
+    
+        <a href="https://steamcommunity.com/profiles/76561198976175627/" title="Steam" rel="nofollow" target="_blank">
+            <i class="iconfont iconfont icon-steam1"></i>
+        </a>
+    
+</div>
+
+<!-- sidebar social end -->
+        <!-- info -->
+<div class="trm-divider trm-mb-40 trm-mt-40"></div>
+<ul class="trm-table trm-mb-20">
+    
+        <li>
+            <div class="trm-label">
+                Residence:
+            </div>
+            <div class="trm-label trm-label-light">
+                Mars
+            </div>
+        </li>
+    
+</ul>
+<!-- info end -->
+
+        
+    <div class="trm-divider trm-mb-40 trm-mt-40"></div>
+    <!-- action button -->
+    <div class="text-center">
+        <a href="mailto:shinotak@foxmail.com" class="trm-btn">
+            联系我
+            <i class="iconfont iconfont icon-envelope"></i>
+        </a>
+    </div>
+    <!-- action button end -->
+
+    </div>
+</div>
+                    <!-- main card end -->
+                </div>
+            
+            <div class="trm-page-content col-lg-8">
+                <div id="trm-content" class="trm-content">
+                    <div class="trm-post-info row hidden-sm">
+    <div class="col-sm-4">
+        <div class="trm-card trm-label trm-label-light text-center">
+            <i class="iconfont iconfont icon-calendar-alt trm-icon"></i><br>
+            23/01/05
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="trm-card trm-label trm-label-light text-center">
+            <i class="iconfont iconfont icon-clock trm-icon"></i><br>
+            21:00
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div id="post-author" class="trm-card trm-label trm-label-light text-center">
+            <i class="iconfont iconfont icon-user1 trm-icon"></i><br>
+            汪崽zzy
+        </div>
+    </div>
+</div>
+<div class="trm-card ">
+    <article id="article-container" class="trm-publication">
+    <blockquote>
+<p>折腾黑苹果的理由有很多，但究其根本，还是源于 Mac 设备高昂的价格与极高的试错成本。不过遗憾的是，随着 Apple 投向 ARM 的怀抱发布了 M1 芯片，黑苹果的死期已在无声中划定。所以一句话，且折腾且珍惜。</p>
+<p>由于我不再对苹果生态抱有念想，所以继续使用黑苹果已经意义不大，再加上重装 Windows 后 OpenCore 引导出现了问题，大概率只能格盘重装，于是借此机会坦然下车了。（不过文中的链接均会尽可能指向官方项目地址，大部分还是具有时效性的）</p>
+</blockquote>
+<p>网络上资料很多，其中不乏大量的英文文档与计算机专业知识，所以打算在此总结一下我的黑苹果之旅。不会很复杂很深入，只是停留在“照猫画虎”的层级上。<br><br></p>
+<h1 id="种植预警"><a href="#种植预警" class="headerlink" title="种植预警"></a>种植预警</h1><ol>
+<li>请谨慎对待任何深入系统底层与 BIOS 的操作，拒绝“无知者无畏”。</li>
+<li>不存在“完美”的黑苹果，或多或少会存在影响使用体验的问题。若做主力系统，请三思。</li>
+<li>安装黑苹果的重要前提是，设备的硬件信息（CPU 与 GPU）应尽可能接近已发布的 Mac 产品，所以请事先调查设备是否存在运行黑苹果的可能。黑苹果的实现可简单理解为，通过仿冒 Mac 设备让系统认为它跑在正确的机器上。<em>（可参考黑苹果星球：<a target="_blank" rel="noopener" href="https://heipg.cn/tutorial/smbios-id-and-details.html">SIMBIOS ID、Platform-ID 机型速查表</a> 与 <a target="_blank" rel="noopener" href="https://heipg.cn/tutorial/diy-hackintosh-2020.html">黑苹果硬件配置推荐表</a>）</em></li>
+<li>选择网友分享的与自己设备相匹配的 EFI 能够大幅降低折腾成本，但请事先确认其安全性与可靠性。</li>
+<li>在升级黑苹果前，务必留意引导、内核驱动文件的更新日志并及时更新至适宜版本。</li>
+<li>善用搜索引擎，解决问题需要大量的时间、精力与耐心来浏览帖子寻找方法。<br></li>
+</ol>
+<h1 id="种植准备"><a href="#种植准备" class="headerlink" title="种植准备"></a>种植准备</h1><h2 id="教程部分"><a href="#教程部分" class="headerlink" title="教程部分"></a>教程部分</h2><ol>
+<li><p>【推荐】黑苹果星球：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://heipg.cn/tutorial/faq-for-beginners.html">黑苹果新手指导：名词解释&amp;常用软件&amp;常见问题说明</a></li>
+<li><a target="_blank" rel="noopener" href="https://heipg.cn/tutorial/basic-install-hackintosh-walkthrough.html">黑苹果 MacOS 系统 U盘版&#x2F;恢复版 基础安装教程</a></li>
+<li><a target="_blank" rel="noopener" href="https://heipg.cn/tutorial/install-macos-by-using-vmware-in-windows.html">在 Windows 下使用 VMware Workstation 安装 MacOS 的详细教程</a></li>
+<li><a target="_blank" rel="noopener" href="https://heipg.cn/tutorial/install-macos-via-internet-recovery.html">黑果安装新姿势，使用 网络恢复方法 安装 MacOS 的详细教程</a></li>
+<li>以及其他<a target="_blank" rel="noopener" href="https://heipg.cn/tutorial">教程</a></li>
+</ul>
+</li>
+<li><p>黑果小兵的部落阁：<a target="_blank" rel="noopener" href="https://blog.daliansky.net/OpenCore-BootLoader.html">精解OpenCore</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://blog.xjn819.com/">Xjn’s Blog</a>：<a target="_blank" rel="noopener" href="https://blog.xjn819.com/post/opencore-guide.html">《使用 OpenCore 引导黑苹果》</a></p>
+</li>
+<li><p>OpenCore 官方英文文档（随版本每月更新）：<a target="_blank" rel="noopener" href="https://github.com/acidanthera/OpenCorePkg/blob/master/Docs/Configuration.pdf">OpenCorePkg&#x2F;Docs&#x2F;Configuration.pdf - Github</a></p>
+</li>
+<li><p>OpenCore 民间中文文档（不定时更新，仅供参考）：<a target="_blank" rel="noopener" href="https://oc.skk.moe/">OpenCore 简体中文参考手册</a></p>
+</li>
+<li><p>基友的折腾记录：<a target="_blank" rel="noopener" href="https://mitchellsbox.ml/Tutorials/Hackintosh/">完美黑苹果从入门到购买白苹果</a></p>
+<br></li>
+</ol>
+<h2 id="答疑部分"><a href="#答疑部分" class="headerlink" title="答疑部分"></a>答疑部分</h2><ol>
+<li><p>【首选】<a target="_blank" rel="noopener" href="https://bbs.pcbeta.com/">远景论坛</a>：国内最大的黑苹果玩家聚集地</p>
+<ul>
+<li>查看、下载资源需要远景账号</li>
+<li>账号注册需要邀请码，可在远景论坛的<a target="_blank" rel="noopener" href="https://tieba.baidu.com/p/6529667838">官方贴吧</a>中寻找申请办法<br></li>
+</ul>
+</li>
+<li><p>善用搜索引擎，注意甄别 CSDN 中的内容。</p>
+<br></li>
+</ol>
+<h2 id="文件部分"><a href="#文件部分" class="headerlink" title="文件部分"></a>文件部分</h2><ol>
+<li><p>系统镜像文件：</p>
+<ul>
+<li>【推荐】黑苹果星球：<a target="_blank" rel="noopener" href="https://heipg.cn/macos">黑苹果系统镜像</a><ul>
+<li>需赞助超级会员才可下载使用，但能解锁全站教程资源</li>
+<li>提供多种类型的镜像文件：<ul>
+<li><strong>【推荐】带 OpenCore、Clover、FirPE 镜像</strong>：即U盘引导版镜像，通过制作U盘引导安装黑苹果。</li>
+<li><strong>官方镜像</strong>：即“白苹果”，只能在 Mac 设备上使用。</li>
+<li><strong>虚拟机 ISO 格式</strong>：适用在 Windows 虚拟机（如 VMware ）上使用。</li>
+<li><strong>APFS 恢复版镜像</strong>：适用于使用 恢复镜像法 安装。</li>
+<li><strong>网络恢复镜像</strong>：使用前提是有线&#x2F;无线网卡可驱动。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>独行秀才的老窝：<a target="_blank" rel="noopener" href="https://shuiyunxc.gitee.io/categories/OpenCore/%E4%B8%8B%E8%BD%BD/">地址</a>（可搜索其微信公众号，更新较为及时）</li>
+<li>黑果小兵的部落阁：<a target="_blank" rel="noopener" href="https://blog.daliansky.net/categories/%E4%B8%8B%E8%BD%BD/%E9%95%9C%E5%83%8F/">地址</a>（可搜索其微信公众号，更新较为及时）</li>
+<li>远景论坛：<a target="_blank" rel="noopener" href="https://bbs.pcbeta.com/">地址</a>（会有热心网友分享）<br></li>
+</ul>
+</li>
+<li><p>引导基础文件：二选一即可</p>
+<ul>
+<li>【首选】<a target="_blank" rel="noopener" href="https://github.com/acidanthera/OpenCorePkg">OpenCore - GitHub</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CloverHackyColor/CloverBootloader">Clover - GitHub</a><br></li>
+</ul>
+</li>
+<li><p>EFI 文件：请尽可能选择<strong>最为匹配</strong>且<strong>更新时间距现在最近</strong>的EFI（ <strong>“最为匹配”</strong> 指 主板、CPU、GPU（核显&#x2F;独显）、WIFI &amp; 蓝牙、声卡 等型号一致或笔记本的 型号 相同）</p>
+<ul>
+<li>黑苹果星球：<a target="_blank" rel="noopener" href="https://heipg.cn/efi">散装EFI文件</a> 与 <a target="_blank" rel="noopener" href="https://heipg.cn/clover/diy-hackintosh-efi.html">各机型EFI文件合集</a></li>
+<li>黑果小兵的部落阁：<a target="_blank" rel="noopener" href="https://blog.daliansky.net/Hackintosh-long-term-maintenance-model-checklist.html">Hackintosh黑苹果长期维护机型整理清单</a></li>
+<li><a target="_blank" rel="noopener" href="https://bbs.pcbeta.com/">远景论坛</a>：散装EFI文件<br></li>
+</ul>
+</li>
+</ol>
+<h2 id="软件部分"><a href="#软件部分" class="headerlink" title="软件部分"></a>软件部分</h2><blockquote>
+<p>若因网络问题无法打开 GitHub 项目地址，可在黑苹果星球的<a target="_blank" rel="noopener" href="https://heipg.cn/apps?app-cat=indispensable">黑苹果工具</a>专栏中搜索下载</p>
+</blockquote>
+<ol>
+<li><p>【必备】【仅 Mac】黑苹果的”瑞士军刀“：<a target="_blank" rel="noopener" href="https://github.com/headkaze/Hackintool">Hackintool - Github</a></p>
+</li>
+<li><p>【必备】跨平台刻录工具：<a target="_blank" rel="noopener" href="https://www.balena.io/etcher/">balenaEtcher</a></p>
+<ul>
+<li>支持 Win、Mac、Linux</li>
+<li>用于向U盘中刻录 macOS 安装镜像（.dmg 文件）<br></li>
+</ul>
+</li>
+<li><p>【必备】【仅 Win】磁盘管理软件：<a target="_blank" rel="noopener" href="https://www.diskgenius.cn/">diskgenius</a></p>
+<ul>
+<li>用于在 Windows 设备上对已刻录好的U盘或已安装好黑苹果的磁盘更换 EFI</li>
+<li>具有磁盘分区、格式化、备份等磁盘管理功能<br></li>
+</ul>
+</li>
+<li><p>【必备】【仅 Mac】【适用 OpenCore】config.plist 文件编辑：<a target="_blank" rel="noopener" href="https://mackie100projects.altervista.org/opencore-configurator/">OpenCoreConfigurator</a></p>
+<ul>
+<li>具有图形化界面，容易上手</li>
+<li>具有挂载 EFI 分区功能，可直接在 MacOS 内对 EFI 进行操作</li>
+<li>使用时需注意匹配 OpenCore 版本（留意更新日志），极不建议跨版本使用</li>
+<li>编辑前注意备份文件，有小概率会破坏 config 文件<br></li>
+</ul>
+</li>
+<li><p>【必备】跨平台 config.plist 文件编辑器：<a target="_blank" rel="noopener" href="https://github.com/corpnewt/ProperTree">ProperTree - Github</a></p>
+<ul>
+<li>支持 WIndows、Mac、Linux</li>
+<li>基于 Python，使用前需要安装 Python 环境</li>
+<li>具有图形化界面，但是以“树”的形式显示文件内容，不太容易上手</li>
+<li>不会损坏 config 文件，但同样建议编辑前备份<br></li>
+</ul>
+</li>
+<li><p>【可选】跨平台 config.plist 文件编辑器：<a target="_blank" rel="noopener" href="https://github.com/ic005k/OCAuxiliaryTools">OCAuxiliaryTools - Github</a></p>
+<ul>
+<li>支持 WIndows、Mac、Linux</li>
+<li>使用时需注意匹配 OpenCore 版本（留意更新日志），极不建议跨版本使用</li>
+<li>编辑前注意备份文件，有小概率会破坏 config 文件<br></li>
+</ul>
+</li>
+<li><p>【进阶】跨平台 DSDT&#x2F;SSDT 编译和反编译工具：<a target="_blank" rel="noopener" href="https://github.com/ic005k/Xiasl">Xiasl - Github</a></p>
+<ul>
+<li>可以反编译 .aml 文件生成 .dsl 文件，也可编译 .dsl 文件生成 .aml 文件</li>
+<li>与 <a target="_blank" rel="noopener" href="https://github.com/acidanthera/MaciASL">MaciASL - Github</a> 功能基本一致，但 Xiasl 可跨平台而 MaciASL 只能用于 MacOS 下，并且 Xiasl 在各个方面的功能也更强大丰富些</li>
+<li>.aml文件：ACPI Machine Language File ，是ACPI（高级配置与电源接口，是一种操作系统电源管理、硬件配置接口的开放标准）二进制文件的格式名，在这里不妨理解为黑苹果的DSDT（存放在&#x2F;EFI&#x2F;OC&#x2F;ACPI目录下）热补丁文件，使设备的控制尽量向白苹果靠近，解决稳定性并提升性能</li>
+<li>.dsl文件：.aml二进制文件的源文件，编译即可生成.aml文件<br></li>
+</ul>
+</li>
+<li><p>【进阶】跨平台 USB 端口定制工具：<a target="_blank" rel="noopener" href="https://github.com/USBToolBox/tool">USBToolBox - Github</a></p>
+<ul>
+<li>命令行工具，无图形化界面，可跨平台支持 Windows</li>
+<li>USB 端口定制原因：MacOS Big Sur 11.3 更新后，OpenCore 的 USB 相关 Quirks XhciPortLimit 失效，导致黑苹果无法使用超出 15 个以上的 USB 接口</li>
+<li>定制教程：参考黑苹果星球 <a target="_blank" rel="noopener" href="https://heipg.cn/tutorial/customize-usb-port-windows.html">USB定制新姿势：Windows下定制黑苹果USB接口详细攻略</a><br></li>
+</ul>
+</li>
+</ol>
+<h2 id="硬件部分"><a href="#硬件部分" class="headerlink" title="硬件部分"></a>硬件部分</h2><ol>
+<li>16GB U盘（至少）一个<ul>
+<li>用途一：刻录镜像文件，通过在 BIOS 设置U盘引导的方法安装黑苹果</li>
+<li>用途二：向 MacOS 传输一些必要文件</li>
+<li>用途三：在已装有黑苹果的电脑上测试 EFI 的可用性<ul>
+<li>在 Windows 上使用 DiskGenius ，选中U盘，选择顶部菜单栏的 快速分区</li>
+<li>在弹出的设置框内依次设置：<ul>
+<li>创建分区个数：1个</li>
+<li>分区表类型：GUID</li>
+<li>创建新的ESP分区：否（不打钩）</li>
+<li>创建新的MSR分区：否（不打钩）</li>
+<li>分区格式：FAT32</li>
+</ul>
+</li>
+<li>格式化完成后，拷入 EFI </li>
+<li>重启电脑，进入 BIOS 选择U盘启动项，即可调用U盘中的 EFI 来启动 MacOS</li>
+</ul>
+</li>
+<li>用途四：定制USB<ul>
+<li>在 Windows 下操作：使用 USBToolBox，只需准备一个 USB 3.0 的U盘，若有 Type-C 接口则再另准备相应接口的U盘即可</li>
+<li>在 MacOS 下操作：使用 Hackintool，则需要 USB 3.0 与 USB 2.0 U盘各一个</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<br>
+
+<ol start="2">
+<li>另一个能够联网且具有 USB 接口的设备（电脑最好）<br></li>
+</ol>
+<h1 id="种植指南"><a href="#种植指南" class="headerlink" title="种植指南"></a>种植指南</h1><h2 id="机型信息"><a href="#机型信息" class="headerlink" title="机型信息"></a>机型信息</h2><ul>
+<li>型号：联想拯救者Y7000P 2019</li>
+<li>主板芯片组：Intel HM370</li>
+<li>CPU：Intel Core i7-9750H 2.60GHz</li>
+<li>GPU：<ul>
+<li>Intel UHD Graphics 630（使用核显驱动 MacOS）</li>
+<li>NVIDIA GeForce GTX 1660 Ti（无法驱动，已屏蔽）</li>
+</ul>
+</li>
+<li>SSD：<ul>
+<li>Samsung PM981A 1TB（安装易出问题，虽有解决方案但不建议使用，已屏蔽）</li>
+<li>Crucial MX500 500G（SATA固态，用于安装黑苹果）</li>
+</ul>
+</li>
+<li>WIFI：Intel Wireless-AC 9560 160MHz</li>
+<li>声卡：Realtek ALC257<br></li>
+</ul>
+<h2 id="EFI-参考"><a href="#EFI-参考" class="headerlink" title="EFI 参考"></a>EFI 参考</h2><ol>
+<li>【首选】<a target="_blank" rel="noopener" href="https://github.com/xiaoMGitHub/LEGION_Y7000Series_Hackintosh">xiaoMGitHub：LEGION_Y7000Series_Hackintosh - Github</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/gclm/Hackintosh-LEGION-Y7000P-I7-9750H">gclm：Hackintosh-LEGION-Y7000P-I7-9750H - Github</a></li>
+</ol>
+
+</article>
+    
+    
+
+</div>
+<div class="trm-post-next-prev row">
+    <div class="col-lg-12">
+        <!-- title -->
+        <h5 class="trm-title-with-divider">
+            其他文章
+            <span data-number="02"></span>
+        </h5>
+    </div>
+    
+        <div class="col-lg-6">
+    <div class="trm-blog-card trm-scroll-animation">
+        <a href="/2023/02/05/%E6%95%B0%E7%A0%81/%E3%80%90%E6%8A%98%E8%85%BE%E8%AE%B0%E5%BD%95%E3%80%91%E5%9F%BA%E4%BA%8E%20Intel%20CPU%20%E7%9A%84%E9%99%8D%E5%8E%8B%E9%99%90%E9%A2%91%E6%8C%87%E5%8D%97/" class="trm-cover-frame trm-anima-link">
+            
+            
+                <img alt="cover" class="no-fancybox" src="https://s2.loli.net/2023/02/05/XEh9vrifQjAbDkl.jpg">
+            
+        </a>
+        
+        <div class="trm-card-descr">
+            <div class="trm-label trm-category trm-mb-20">
+                <a href=" /categories/%E6%95%B0%E7%A0%81/">
+                    数码
+                </a>
+            </div>
+            <h5>
+                <a href="/2023/02/05/%E6%95%B0%E7%A0%81/%E3%80%90%E6%8A%98%E8%85%BE%E8%AE%B0%E5%BD%95%E3%80%91%E5%9F%BA%E4%BA%8E%20Intel%20CPU%20%E7%9A%84%E9%99%8D%E5%8E%8B%E9%99%90%E9%A2%91%E6%8C%87%E5%8D%97/" class="trm-anima-link">
+                    【折腾记录】基于 Intel CPU 的降压限频指南
+                </a>
+            </h5>
+            <div class="trm-divider trm-mb-20 trm-mt-20"></div>
+            <ul class="trm-card-data trm-label">
+                <li>23/02/05</li>
+                <li>12:00</li>
+                
+                
+            </ul>
+        </div>
+    </div>
+</div>
+    
+    
+        <div class="col-lg-6">
+    <div class="trm-blog-card trm-scroll-animation">
+        <a href="/2022/12/30/%E6%96%AD%E7%AB%A0/%E3%80%90%E6%97%85%E8%80%85%E8%87%AA%E8%BF%B0%E3%80%91%E6%AD%A4%E5%BF%83%E5%AE%89%E5%A4%84%E6%98%AF%E5%90%BE%E4%B9%A1/" class="trm-cover-frame trm-anima-link">
+            
+            
+                <img alt="cover" class="no-fancybox" src="https://s2.loli.net/2022/12/30/b9Ag57J3PZXCwrM.jpg">
+            
+        </a>
+        
+        <div class="trm-card-descr">
+            <div class="trm-label trm-category trm-mb-20">
+                <a href=" /categories/%E6%96%AD%E7%AB%A0/">
+                    断章
+                </a>
+            </div>
+            <h5>
+                <a href="/2022/12/30/%E6%96%AD%E7%AB%A0/%E3%80%90%E6%97%85%E8%80%85%E8%87%AA%E8%BF%B0%E3%80%91%E6%AD%A4%E5%BF%83%E5%AE%89%E5%A4%84%E6%98%AF%E5%90%BE%E4%B9%A1/" class="trm-anima-link">
+                    【旅者自述】此心安处是吾乡
+                </a>
+            </h5>
+            <div class="trm-divider trm-mb-20 trm-mt-20"></div>
+            <ul class="trm-card-data trm-label">
+                <li>22/12/30</li>
+                <li>22:00</li>
+                
+                
+            </ul>
+        </div>
+    </div>
+</div>
+    
+</div>
+
+    
+
+
+
+                    <div class="trm-divider footer-divider"></div>
+
+                    <!-- footer -->
+                    <footer class="trm-scroll-animation">
+
+    
+
+    
+        <div class="trm-footer-item">
+            <span>© 2020- 2023</span>
+            <span class="footer-separator"data-separator=" · "></span>
+            <span class="trm-accent-color">无闻沙洲</span>
+        </div>
+    
+
+    
+        <div class="trm-footer-item">
+            <span>
+                由 <a href="https://hexo.io" target="_blank" rel="noopener">Hexo</a> 驱动 v7.0.0
+            </span>
+            <span class="footer-separator" data-separator=" | "></span>
+            <span> 
+                主题 - 
+                <a rel="noopener" href='https://github.com/MaLuns/hexo-theme-async' target='_blank'>Async</a>
+                v2.1.10
+            </span>
+        </div>
+      
+
+     
+
+    
+        <div class="trm-footer-item">
+            Hosted by <a href="https://github.com" rel="noopener" target="_blank">&nbsp;Github Pages</a>
+        </div>
+     
+</footer>
+                    <!-- footer end -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+            <!-- body end -->
+
+            
+
+    <div id="post-toc" class="trm-post-toc">
+      <div class="trm-post-toc-header">
+        目录导航
+				<span id="post-toc-top">
+					置顶
+				</span>
+      </div>
+      <div class="trm-post-toc-content">
+        <ol class="trm-toc"><li class="trm-toc-item trm-toc-level-1" title="种植预警"><a rel="nofollow" class="trm-toc-link" href="#种植预警"><span class="trm-toc-number">1.</span> <span class="trm-toc-text">种植预警</span></a></li><li class="trm-toc-item trm-toc-level-1" title="种植准备"><a rel="nofollow" class="trm-toc-link" href="#种植准备"><span class="trm-toc-number">2.</span> <span class="trm-toc-text">种植准备</span></a><ol class="trm-toc-child"><li class="trm-toc-item trm-toc-level-2" title="教程部分"><a rel="nofollow" class="trm-toc-link" href="#教程部分"><span class="trm-toc-number">2.1.</span> <span class="trm-toc-text">教程部分</span></a></li><li class="trm-toc-item trm-toc-level-2" title="答疑部分"><a rel="nofollow" class="trm-toc-link" href="#答疑部分"><span class="trm-toc-number">2.2.</span> <span class="trm-toc-text">答疑部分</span></a></li><li class="trm-toc-item trm-toc-level-2" title="文件部分"><a rel="nofollow" class="trm-toc-link" href="#文件部分"><span class="trm-toc-number">2.3.</span> <span class="trm-toc-text">文件部分</span></a></li><li class="trm-toc-item trm-toc-level-2" title="软件部分"><a rel="nofollow" class="trm-toc-link" href="#软件部分"><span class="trm-toc-number">2.4.</span> <span class="trm-toc-text">软件部分</span></a></li><li class="trm-toc-item trm-toc-level-2" title="硬件部分"><a rel="nofollow" class="trm-toc-link" href="#硬件部分"><span class="trm-toc-number">2.5.</span> <span class="trm-toc-text">硬件部分</span></a></li></ol></li><li class="trm-toc-item trm-toc-level-1" title="种植指南"><a rel="nofollow" class="trm-toc-link" href="#种植指南"><span class="trm-toc-number">3.</span> <span class="trm-toc-text">种植指南</span></a><ol class="trm-toc-child"><li class="trm-toc-item trm-toc-level-2" title="机型信息"><a rel="nofollow" class="trm-toc-link" href="#机型信息"><span class="trm-toc-number">3.1.</span> <span class="trm-toc-text">机型信息</span></a></li><li class="trm-toc-item trm-toc-level-2" title="EFI 参考"><a rel="nofollow" class="trm-toc-link" href="#EFI-参考"><span class="trm-toc-number">3.2.</span> <span class="trm-toc-text">EFI 参考</span></a></li></ol></li></ol>
+      </div>
+    </div>
+
+            
+<div class="trm-fixed-container">
+    
+        <div class="trm-fixed-btn post-toc-btn" data-title="目录">
+            <i class="iconfont iconfont icon-th-list"></i>
+        </div>
+    
+    
+        <div class="trm-fixed-btn" data-title="阅读模式" onclick="asyncFun.switchReadMode()">
+            <i class="iconfont iconfont icon-book-reader"></i>
+        </div>
+    
+    
+    <div id="trm-back-top" class="trm-fixed-btn" data-title="回到顶部">
+        <i class="iconfont iconfont icon-arrow-alt-circle-up"></i>
+    </div>
+</div>
+        </div>
+      </div>
+      <!-- scroll container end -->
+  </div>
+  <!-- app wrapper end -->
+
+  
+  <!-- Plugin -->
+
+
+
+
+    
+    
+<script src="https://unpkg.com/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+
+    
+
+    
+        <script src="/js/plugins/typing.js?v=2.1.10"></script>
+    
+
+    
+
+    <!-- 数学公式 -->
+    
+
+    <!-- 评论插件 -->
+    
+        
+
+        
+    
+
+
+
+<!-- CDN -->
+
+
+    
+
+    
+
+    
+
+
+
+
+    <!-- Service Worker -->
+    
+    <!-- baidu push -->
+    
+
+
+<script id="async-script" src="/js/main.js?v=2.1.10"></script>
+
+</body>
+
+</html>
