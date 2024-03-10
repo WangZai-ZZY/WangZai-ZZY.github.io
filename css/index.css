@@ -3623,10 +3623,18 @@ pre .coffeescript .title {
   transform: translateY(0) scale(1);
 }
 :root {
-  --primary: #5a5df0;
-  --primary-70: rgba(90, 93, 240, 0.7);
-  --primary-50: rgba(90, 93, 240, 0.5);
-  --primary-30: rgba(90, 93, 240, 0.3);
-  --primary-weak: #697be2;
-  --primary-weak-50: rgba(105, 123, 226, 0.5);
+  --primary: #002FA7;
+  --primary-70: rgba(0, 47, 167, 0.7);
+  --primary-50: rgba(0, 47, 167, 0.5);
+  --primary-30: rgba(0, 47, 167, 0.3);
+  --primary-weak: #1054ff;
+  --primary-weak-50: rgba(16, 84, 255, 0.5);
+}
+:root.dark {
+  --primary: #a4ce60;
+  --primary-70: rgba(164, 206, 96, 0.7);
+  --primary-50: rgba(164, 206, 96, 0.5);
+  --primary-30: rgba(164, 206, 96, 0.3);
+  --primary-weak: #82df7a;
+  --primary-weak-50: rgba(130, 223, 122, 0.5);
 }
