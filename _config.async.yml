@@ -6,12 +6,12 @@ user:
   email: shinotak@foxmail.com
   domain: https://www.shinotak.com
   avatar: https://s2.loli.net/2022/12/06/rjAGieHp6o9Ks1k.png
-  describe: 人间已醉万年，还不许我大梦一场？
-  ruleText: 暂不开放友链申请。
+  describe: 让痛苦被言说。
 
 # Configure the icon information of the site 网站图标
 favicon:
   logo: /img/favicon/favicon.png
+  dark_logo: /img/favicon/favicon_dark.png
   icon16: /img/favicon/favicon-16x16.png
   icon32: /img/favicon/favicon-32x32.png
   appleTouchIcon: /img/favicon/apple-touch-icon.png
@@ -90,8 +90,6 @@ top_bars:
     url: /archives/
   - title: 链接
     url: /links/
-  - title: 呓语
-    url: /talks/
   - title: 关于
     url: /about/
 
@@ -154,57 +152,29 @@ sidebar:
 about:
   title: 整理一些学习过程中的笔记，书写一些风花雪月的文字，以及诉说一名旅者的故事。
   introduction: 
-    嗨，这里是<strong>汪崽zzy</strong>，欢迎光临我的小破站🎉。
+    嗨！这里是<strong>汪崽zzy</strong>，欢迎光临我的小破站🎉。
     <br><br>
-    目前我已经大学毕业，正在着手考研二战。
+    下面是一些快问快答：
     <br><br>
-    我个人认为，MBTI的核心价值在于，它提供了一个经由人的自主行为意识来解读其内在性格的观察视角。换句话说，这十六种职业性格只是一种凝练的外在表征，而非决定了我们的内在为人。
-    并且经由阿德勒心理学的视角，高度发扬主观能动的目的论也在某种意义上驳斥了所谓的MBTI决定论。
-    无论如何，就目前来讲，我大概是处在 ISFJ 到 INFP 之间的某个阶段。
+    Q：请简要描述一下自己。<br>
+    A：不喜欢敲代码的IT打工人、不喜欢搞算法的代码CV苦手；人畜无害的男通讯录、渴望“接地气”的自命清高者、肌肤饥渴症重度患者；理想主义的懒汉、现实主义的怂包。
     <br><br>
-    如果抛开教条的性格定义，以个人的视角来描述目前的自己，大概就是：
-    初见内敛慢热、熟识热情嘴碎；时常随和谦卑、躲避人潮，但有时也会固执己见、不依不饶；
-    以乐于助人为安身立命之本，以敏感感性为 DEBUFF 加成；理想主义的懒汉、现实主义的怂包。
+    Q：请概括一下自己的性格特征。<br>
+    A：社恐内向而习惯性躲避人潮，但从始至终都在渴望触碰与友谊；初识往往内敛慢热，熟络后热情嘴碎；常态坦诚谦和、胆小懦弱，但也有自己的底线，偶尔也会固执己见、不管不顾。
     <br><br>
-    虽说是个蛮内向的人，很多时候也不太会如何跟别人打成一片，但还是很清楚自己并不属于“享受孤独”那类人的，会渴望友谊，渴望贴贴。
-    如果硬要说我对友谊有什么最为看重的东西，那大概是真诚坦率。至于乐观开朗、积极阳光之类的，尽管我很喜欢跟拥有这类性格的人相处，但也并不代表我会排斥其他人。
-    而如若谈及我对一段友谊的期待，我大概会说希望对方能带领我做出一些生活上的有益改变，比如走出舒适区、一起探索尝试陌生新事物等等。
+    Q：你有什么爱好？<br>
+    A：其实没有什么能拿得出手的爱好，也就是会看看书啦、打打游戏啦、折腾折腾电脑手机啦，当然剩下的大部分时间基本都用在精神内耗上了hhh。
     <br><br>
-    谈及喜好，可以说，阅读、数码、游戏都是我生活中的一部分。
-    <br><br>
-    一般而言，在对生活困惑、渴求答案时，我会阅读一些哲学和心理学方面的书籍；
-    在内心平和、希望丰盈精神世界时，会选择一些经典的文学作品来调剂生活；
-    而在摸鱼划水的时候，可能也会找一些轻松愉快（随时发刀）的小说来读。
-    <br><br>
-    初中时受“好基友”的影响，走上了一条不归路（bushi）——一条对手机电脑等数码产品感兴趣的道路。
-    也正是在那时，我接触到了魅族与MX4，成为了一名魅友，开始了与魅族的爱恨情仇。
-    至于喜欢瞎折腾瞎鼓捣什么的，尽管有各种条件限制扑腾不出什么水花，但也确实靠此消磨了不少无聊的时光。
-    <br><br>
-    毫不夸张的说，我的游戏生涯是在大学正式开始的。
-    大一下学期居家隔离线上授课期间，我邂逅了明日方舟。作为一个平时喜欢胡思乱想的人，我也顺理成章地成为了所谓的“剧情党”。再结合不需要多少操作的塔防玩法，方舟在很长的一段时间里霸占了我的常驻手游席位。
-    由于家里的限制，单机类的游戏主要在学校游玩。诸如看门狗、量子破碎、GTA5、无人深空、泰坦陨落2、奥日、死亡搁浅、哈迪斯、巫师3、群星、星球大战绝地等等。
-    不过，由于我忌惮语音与评论区的情绪化对线，所以 PVP 向的游戏基本是被我绕开的，比如 CSGO、APEX、LOL 什么的。
-    <br><br>
-    当然，如果有机会能进一步了解我的话，可能会发觉我的另一种喜好——Furry。
-    这种从喜欢诸如猫猫狗狗的小动物，到动画片中虹猫、白糖等各种形象，再到疯狂动物城、大侦探皮卡丘等电影中的角色……一路走来直到最后觉醒Furry属性，着实令人唏嘘感叹。
-    莫得办法，可爱对我来说就是第一加分项（理直气壮）。
+    Q：你的MBTI是什么？<br>
+    A：目前应该是ISFP了，之前也有测出过ISFJ和INFP。
   blog: 
-    标签是认识、了解一个人最快速便捷的途径，也是描述、概括一个人最简单直接的方法。所以不可避免的，它是刻板印象的一种具象体现。
-    <br>
-    我并不否认标签的存在价值。尽管时常会有失偏颇，但它能够极大地节约社交成本，规避风险、降低损失。
-    <br>
-    不过我始终相信，当我们选择走近一个人时，终会触及标签所圈定的边界，会感受到它的浅薄与冰冷，会领略到生命的柔性与生机。或许，还会因此而抱怨语言的无力。
-    <br><br>
     横幅配图：
-    <br>
-    主页：<a href="https://www.pixiv.net/artworks/82343229">「明日方舟-崩坏」-by. Z4</a><br>
-    归档：<a href="https://hanyijie.lofter.com/post/d7b61_1cc897861">「艾雅法拉」-by. 韩一杰</a><br>
-    链接：<a href="http://www.uchor.com/U/1024975">「夜市」-by. 狛纳世界</a><br>
-    关于：<a href="http://www.uchor.com/U/1024975">「四日火光节」-by. 狛纳世界</a><br>
-  privacy: 
-    本网站不会追踪访客行为，且不要求访客提供任何敏感信息（比如真实姓名、身份证号码、手机号等），因而也不存在任何隐私泄漏问题。
-    <br>
-    访客参与评论，必须遵守法律法规和基本道德规范，文明礼貌。严禁发布任何有关淫秽、反动、暴力、博彩、恐吓、低俗的内容或违法信息，在尊重言论自由的同时请保持和平与理性。请勿对他人采取不友好的评论或其它过激行为。
+    <ul>
+      <li>主页：<a href="https://www.pixiv.net/artworks/82343229">「明日方舟-崩坏」-by. Z4</a></li>
+      <li>归档：<a href="https://hanyijie.lofter.com/post/d7b61_1cc897861">「艾雅法拉」-by. 韩一杰</a></li>
+      <li>链接：<a href="http://www.uchor.com/U/1024975">「夜市」-by. 狛纳世界</a></li>
+      <li>关于：<a href="http://www.uchor.com/U/1024975">「四日火光节」-by. 狛纳世界</a></li>
+    </ul>
 
 # Footer settings 页脚配置
 footer:
@@ -264,7 +234,7 @@ creative_commons:
 # Customize the cover image 自定义封面图
 cover:
   default: /img/block.jpg
-  type: img # img || date || random
+  type: date # img || date || random
 
 # The previous and the next article 上下文
 post_pagination: 
@@ -353,7 +323,7 @@ search:
 # Think of swup as being pjax on steroids. The concepts are similar to those used in barba.js or other transition libraries.
 # https://swup.js.org/
 # Whether swup is enabled
-swup: false
+swup: true
 
 # Datetime formatting 日期格式化
 datetime_foramt:
@@ -376,7 +346,7 @@ datetime_foramt:
 categorie_card:
   enable: true
   len: 4
-  list:
+  list: ["数码", "阅读", "断章", "日记"]
 
 # Lower right button 
 rightside:
@@ -396,49 +366,3 @@ highlight:
   lang: true # show the code language
   code_word_wrap: fasle #
   height_limit: 200 # unit: px
-
-# Customize the template path 自定义模板
-layout:
-  path: layout
-  # layout
-  main:  _partial/main
-  header: _partial/header
-  banner: _partial/banner
-  sidebar: _partial/sidebar/index
-  footer: _partial/footer
-  # post
-  post_info: _partial/post/post-info
-  post_content: _partial/post/post-content
-  reward: _partial/post/reward
-  post_copyright: _partial/post/post-copyright
-  post_next_prev: _partial/post/post-next-prev
-  post_card: _partial/post/post-card
-  post_card_mini: _partial/post/post-card-mini
-  # widget
-  header_logo: _widget/header-logo
-  header_menu: _widget/header-menu
-  header_theme: _widget/header-theme
-  header_search: _widget/header-search
-  categorie: _widget/categorie
-  paginator: _widget/paginator
-  fixed_btn: _widget/fixed-btn
-  post_toc: _widget/post-toc
-	about_card: _widget/about-card
-  sidebar_user: _partial/sidebar/card/user
-  sidebar_social: _partial/sidebar/card/social
-  sidebar_info: _partial/sidebar/card/info
-  sidebar_email: _partial/sidebar/card/email
-  # third-party
-  comment: _third-party/comment/index
-  analytics: _third-party/web-analytics
-  # animation
-  page_loading: _partial/preloader/page-preloader
-  mode_change:  _partial/preloader/change-mode-preloader
-  # page
-  page_about: _partial/page/about
-  page_archive: _partial/page/archive
-  page_category: _partial/page/category
-  page_index: _partial/page/index
-  page_links: _partial/page/links
-  page_post: _partial/page/post
-  page_tag: _partial/page/tag
