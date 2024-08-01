@@ -3337,6 +3337,20 @@ details p {
 .trm-exit-readmode:hover {
   color: var(--primary);
 }
+.trm-single-column .trm-banner .col-lg-8 {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+.trm-single-column .trm-banner .trm-banner-text {
+  text-align: center;
+}
+.trm-single-column .trm-page-sidebar {
+  display: none;
+}
+.trm-single-column .trm-page-content {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
 /* code title */
 /* mac style title */
 /* max height */
@@ -3731,14 +3745,14 @@ pre .coffeescript .title {
   --primary-70: rgba(0, 47, 167, 0.7);
   --primary-50: rgba(0, 47, 167, 0.5);
   --primary-30: rgba(0, 47, 167, 0.3);
-  --primary-weak: #1054ff;
-  --primary-weak-50: rgba(16, 84, 255, 0.5);
+  --primary-weak: #E3BF2B;
+  --primary-weak-50: rgba(227, 191, 43, 0.5);
 }
 :root.dark {
-  --primary: #a4ce60;
-  --primary-70: rgba(164, 206, 96, 0.7);
-  --primary-50: rgba(164, 206, 96, 0.5);
-  --primary-30: rgba(164, 206, 96, 0.3);
-  --primary-weak: #82df7a;
-  --primary-weak-50: rgba(130, 223, 122, 0.5);
+  --primary: #91C46C;
+  --primary-70: rgba(145, 196, 108, 0.7);
+  --primary-50: rgba(145, 196, 108, 0.5);
+  --primary-30: rgba(145, 196, 108, 0.3);
+  --primary-weak: #C6E070;
+  --primary-weak-50: rgba(198, 224, 112, 0.5);
 }
