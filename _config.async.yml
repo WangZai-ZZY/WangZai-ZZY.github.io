@@ -1,43 +1,49 @@
-# user info 站点信息
+# Open Graph protocol
+open_graph: true
+
+# User info
 user:
   name: 无闻沙洲
   first_name: 沙洲
   last_name: 无闻
   email: shinotak@foxmail.com
-  domain: https://www.shinotak.com
-  avatar: https://s2.loli.net/2022/12/06/rjAGieHp6o9Ks1k.png
-  describe: 让痛苦被言说。
+  domain: https://wangzai-zzy.github.io
+  avatar: /images/avatar.png
+  describe: 让情绪被看见，让痛苦被言说。
 
-# Configure the icon information of the site 网站图标
+# Configure the icon information of the site
 favicon:
-  logo: /img/favicon/favicon.png
-  dark_logo: /img/favicon/favicon_dark.png
-  icon16: /img/favicon/favicon-16x16.png
-  icon32: /img/favicon/favicon-32x32.png
-  appleTouchIcon: /img/favicon/apple-touch-icon.png
-  webmanifest: /img/favicon/site.webmanifest
-  visibilitychange: false # 是否在离开窗口时切换标题显示
+  logo: /images/favicon.png
+  dark_logo: /images/favicon_dark.png
+  icon16: /images/favicon.png
+  icon32: /images/favicon.png
+  apple_touch_icon: /images/favicon.png
+  visibilitychange: false
+  hidden: /failure.ico # Displays an icon when not visible
+  show_text: favicon.show_text
+  hide_text: favicon.hide_text
 
-# Theme resource files or plug-ins 插件配置
+# Theme resource files or plug-ins
 assets:
-  # The cdn configuration of the js inside the theme 主題內部 js 的 cdn 配置
+  # The cdn configuration of the js inside the theme
   internal_provider: local
-  # cdn configuration of third-party js 第三方 js 的 cdn 配置
+  # cdn configuration of third-party js
   third_party_provider: unpkg
-  # The plug-in used by the theme 主题使用到的插件
+  # The plug-in used by the theme
   plugin:
     hexo_theme_async:
       rowcss: css/plugins/bootstrap.row.css
       typing: js/plugins/typing.js
       search: js/plugins/local_search.js
+			danmu: js/plugins/danmu.js
       main: js/main.js
-  # Icon configuration 图标配置
+  # Icon configuration
   icons: 
     type: font # font symbol
     css:  //at.alicdn.com/t/c/font_3549054_n096xdrq7me.css
     js:
 
-# CDN User - defined plug-in 静态资源加速
+# CDN User - defined plug-in
 cdn:
   css: 
   js:
@@ -46,43 +52,43 @@ cdn:
     async: 
     defer: 
 
-# The icon used by the theme 主题固定图标
+# The icon used by the theme
 icons:
-  # 主题切换图标
+  # Theme switch icon
   sun: iconfont icon-sun
   moon: iconfont icon-moon
-  # 首页视频播放
+  # Home video play
   play: iconfont icon-play-circle
-  # 邮箱
+  # email icon
   email: iconfont icon-envelope
-  # 分类进入图标
+  # Category entry icon
   next: iconfont icon-arrow-alt-circle-rig
-  # 文章详情 日期
+  # Date of article details
   calendar: iconfont icon-calendar-alt
-  # 文章详情 时间
+  # Article details time
   clock: iconfont icon-clock
-  # 文章详情 作者
+  # Author of article details
   user: iconfont icon-user1
-  # 返回顶部 v1.1.3+
+  # Return to the top icon
   back_top: iconfont icon-arrow-alt-circle-up
-  # 关闭 v1.1.5+
+  # close icon
   close: iconfont icon-times-circle
-  # 查询 v1.1.5+
+  # search icon
   search: iconfont icon-search
-  # 打赏 v1.1.7+
+  # reward icon
   reward: iconfont icon-hand-holding-usd
-  # 用户信息和文章目录切换 v1.2.10+
+  # User information and article directory switch
   user_tag: iconfont icon-user
   toc_tag: iconfont icon-th-list
-  # 右下角固定按钮 v1.2.11+
+  # Secure the button in the lower right corner
   read: iconfont icon-book-reader
   arrows: iconfont icon-arrows-alt-h
-  # 代码高亮折叠 v2.0.0+
+  # Code highlight fold icon
   double_arrows: iconfont icon-angle-double-down
-  # 代码复制
+  # Code copy icon
   copy: iconfont icon-copy
 
-# Top navigation menu 顶部导航栏
+# Top navigation menu
 top_bars:
   - title: 主页
     url: /
@@ -93,90 +99,96 @@ top_bars:
   - title: 关于
     url: /about/
 
-# Banner settings 横幅配置
+# Banner settings
 banner:
   use_cover: false
+	danmu: 
+		enable: false
+		el: .trm-banner
   default:
     type: img
-    bgurl: /img/banner_default.png
-    bannerText: 
+    bgurl: https://s2.loli.net/2024/07/29/bUwSQrg95tfeiHN.jpg
+    banner_text: 
     position: top
     fit: cover
   index:
     type: img
+    bgurl: https://s2.loli.net/2024/07/29/1G96t2w7XDENdf4.jpg
     bannerTitle: 我知道，<br>是流星赞美了黑夜，<br>鲸鱼安慰了大海。
-    bgurl: https://s2.loli.net/2022/11/28/NdApR5GFcMgekam.jpg
     bannerText: 
-    videoUrl: 
   archive:
     type: img
-    bgurl: https://s2.loli.net/2022/11/28/1a3pKmVUWkMtQAj.jpg
+    bgurl: https://s2.loli.net/2024/07/29/4G2KZkqmz8QlHY9.jpg
     bannerTitle: 漫游者向清晨绿色的地带降落，<br>万物燃烧。
-    bannerText:
+    bannerText: 
   links:
     type: img
-    bgurl: https://s2.loli.net/2022/11/28/4KP1WsQR3HCAYgd.jpg
+    bgurl: https://s2.loli.net/2024/07/29/7qSjfYhK62cugXV.jpg
     bannerTitle: 未闻花名，<br>犹记繁花。
-    bannerText:
+    bannerText: 
   about:
     type: img
-    bgurl: https://s2.loli.net/2022/11/28/QANehqDT6K8gY1d.jpg
-    bannerTitle: 真正的生活是在撕裂内部出现的。<br>生活，就是撕裂本身。
-    bannerText:
+    bgurl: https://s2.loli.net/2024/07/29/EHcjLsW7z4d6T9g.jpg
+    bannerTitle: 直面恐惧，斩断循环；<br>拥抱过去，创造未来。
+    bannerText: 
 
-# Sidebar settings 侧栏配置
+# Sidebar settings
 sidebar:
-  typedTextPrefix: 
-  typedText: [ '但行好事，莫问前程' ]
-  # 侧栏信息
+  typed_text_prefix: 
+  typed_text: [ '但行好事，莫问前程' ]
   info: 
     - key: Residence
       val: Mars
-  # 社交链接
   social:
-    - name: Github
-      icon: iconfont icon-github
-      url: https://github.com/WangZai-ZZY
-    - name: Weibo
-      icon: iconfont icon-weibo-fill
-      url: https://weibo.com/u/7348512128/
     - name: BiliBili
       icon: iconfont icon-bilibili-fill
       url: https://space.bilibili.com/449552577
+    - name: Weibo
+      icon: iconfont icon-weibo-fill
+      url: https://weibo.com/u/7348512128/
     - name: Steam
       icon: iconfont icon-steam1
       url: https://steamcommunity.com/profiles/76561198976175627/
-
+    - name: Github
+      icon: iconfont icon-github
+      url: https://github.com/WangZai-ZZY
 
 # About page settings
 about:
+	insert: none # before | after | none
   title: 整理一些学习过程中的笔记，书写一些风花雪月的文字，以及诉说一名旅者的故事。
   introduction: 
     嗨！这里是<strong>汪崽zzy</strong>，欢迎光临我的小破站🎉。
     <br><br>
-    下面是一些快问快答：
+    下面是个人向采访：
     <br><br>
-    Q：请简要描述一下自己。<br>
-    A：不喜欢敲代码的IT打工人、不喜欢搞算法的代码CV苦手；人畜无害的男通讯录、渴望“接地气”的自命清高者、肌肤饥渴症重度患者；理想主义的懒汉、现实主义的怂包。
+    Q：简要描述一下自己。<br>
+    A：对前路感到迷茫困惑的存在主义单推人、行事死板保守却也渴望打破常规的男通讯录、想守护自身特质但也渴望“接地气”的“小孤独”；
+    肌肤饥渴症重度患者；理想主义的懒汉、现实主义的怂包。
     <br><br>
-    Q：请概括一下自己的性格特征。<br>
-    A：社恐内向而习惯性躲避人潮，但从始至终都在渴望触碰与友谊；初识往往内敛慢热，熟络后热情嘴碎；常态坦诚谦和、胆小懦弱，但也有自己的底线，偶尔也会固执己见、不管不顾。
+    Q：概括一下自己的性格特征。<br>
+    A：虽然会因为社恐内向而习惯性躲避人潮，但无时不刻不在渴望触碰与陪伴，内敛慢热与热情闷骚并存；
+    缺乏自信、不够独立自主，经常会看别人脸色行事，做选择时难以只靠自己做出决定；
+    由于不喜欢与他人发生正面冲突而习惯隐藏内心真实想法，但当身心疲惫至难以忍耐时会选择消极应对（也有概率会一股脑地爆发）。
     <br><br>
-    Q：你有什么爱好？<br>
-    A：其实没有什么能拿得出手的爱好，也就是会看看书啦、打打游戏啦、折腾折腾电脑手机啦，当然剩下的大部分时间基本都用在精神内耗上了hhh。
+    Q：有什么爱好？<br>
+    A：细细想来好像没什么拿得出手的爱好，也就是偶尔看看书、经常打打游戏、时不时折腾折腾电脑手机什么的，
+    然后剩下的大部分时间基本都用在精神内耗上了hhh。
     <br><br>
-    Q：你的MBTI是什么？<br>
-    A：目前应该是ISFP了，之前也有测出过ISFJ和INFP。
+    Q：目前有哪些想做的事？<br>
+    A：摄影、健身、系统学习羽毛球、日语等等，当然除了这些最想做的还是找个能合得来的男朋友hhh。
+    <br><br>
+    Q：MBTI是什么？<br>
+    A：目前大概是INFP，之前也有测出过ISFJ与ISFP。
   blog: 
-    横幅配图：
-    <ul>
-      <li>主页：<a href="https://www.pixiv.net/artworks/82343229">「明日方舟-崩坏」-by. Z4</a></li>
-      <li>归档：<a href="https://hanyijie.lofter.com/post/d7b61_1cc897861">「艾雅法拉」-by. 韩一杰</a></li>
-      <li>链接：<a href="http://www.uchor.com/U/1024975">「夜市」-by. 狛纳世界</a></li>
-      <li>关于：<a href="http://www.uchor.com/U/1024975">「四日火光节」-by. 狛纳世界</a></li>
+    <ul class="trm-list">
+      <li>主页配图：<a href="http://www.uchor.com/U/1024975">「四日火光节」-by. 狛纳世界</a></li>
+      <li>归档配图：<a href="https://hanyijie.lofter.com/post/d7b61_1cc897861">「艾雅法拉」-by. 韩一杰</a></li>
+      <li>链接配图：<a href="http://www.uchor.com/U/1024975">「夜市」-by. 狛纳世界</a></li>
+      <li>关于配图：<a href="https://x.com/gggggoou/status/1815365337795445176">「未命名」-by. gow</a></li>
     </ul>
 
-# Footer settings 页脚配置
+# Footer settings
 footer:
   # Hexo link (Powered by Hexo).
   powered:
@@ -187,18 +199,18 @@ footer:
     enable: false
     icp: 
   # Copyright date
-  copyrightYear: 2020
-  # 运行时间
+  copyright_year: 2020
+  # 
   live_time:
     enable: false
     prefix: footer.tips
     start_time: 04/10/2022 17:00:00
-  # 自定义文本
+  #
   custom_text: Hosted by <a href="https://github.com" rel="noopener" target="_blank">&nbsp;Github Pages</a>
 
 # Here is a collection of articles related to configuration.
 #### Article configuration start ###
-# Reward (Donate) 打赏
+# Reward (Donate)
 # If enable true, reward would be displayed in every posts and pages by default.
 # You can show or hide reward in a specific page throuth `reward: true | false` in Front Matter.
 reward:
@@ -207,7 +219,7 @@ reward:
   # url:
   methods:
 
-# Article table of contents 文章目录
+# Article table of contents
 toc:
   enable: true
   list_number: true
@@ -215,11 +227,11 @@ toc:
   max_depth: 3
   min_depth: 1
 
-# Archive page 归档页配置
+# Archive page
 archive:
   type: more # less more
 
-# Creative Commons 4.0 International License. 版权信息
+# Creative Commons 4.0 International License.
 # https://creativecommons.org/licenses/
 # Available values of license: by | by-nc | by-nc-nd | by-nc-sa | by-nd | by-sa | zero
 # You can set a language value if you prefer a translated version of CC license.
@@ -231,21 +243,21 @@ creative_commons:
   post: false
   clipboard: false
 
-# Customize the cover image 自定义封面图
+# Customize the cover image
 cover:
-  default: /img/block.jpg
+  default: /images/block_default.jpg
   type: date # img || date || random
 
-# The previous and the next article 上下文
+# The previous and the next article
 post_pagination: 
   enable: true 
-  type: large # large || small
+  type: small # large || small
 
-# img loading="lazy" 图片懒加载
+# img loading="lazy"
 lazyload:
   enable: true
 
-# Displays outdated notice for a post 文章过期提醒
+# Displays outdated notice for a post (文章过期提醒)
 notice_outdate:
   enable: false
   style: flat # style: simple/flat
@@ -253,8 +265,8 @@ notice_outdate:
   position: top # position: top/bottom
 #### Article configuration end ###
 
-# Page Visit Statistics 分析统计
-webAnalytics:  
+# Page Visit Statistics
+web_analytics:  
   enable: false 
   baidu:   # Baidu key
   google:  # Tracking ID for Google statistics
@@ -262,7 +274,7 @@ webAnalytics:
     sid:
     cid:
 
-# comment 评论
+# comment
 comment:
   bComments:
     enable: false
@@ -286,15 +298,15 @@ comment:
       light: light
       dark: transparent_dark
 
-# Theme mode 主题配置
+# Theme mode 
 theme: 
   switch: true 
   default: style-light # style-light style-dark
 
-# Service Worker 渐进式应用PWA
+# Service Worker
 sw: false
 
-# Post wordcount 字数统计
+# Post wordcount
 # https://github.com/willin/hexo-wordcount
 wordcount:
   enable: false
@@ -302,7 +314,7 @@ wordcount:
   time: true
 
 # That is it only render those page which has `katex: true` in Front-matter.
-# math fomula 数学公式
+# math fomula
 # https://katex.org/
 katex:
   copy_tex: true
@@ -311,7 +323,7 @@ katex:
   # In page katex options are also possible and will be merged
   options: {}
 
-# Blog search 搜索
+# Blog search
 search:
   enable: false
   type: engine #local engine
@@ -325,7 +337,7 @@ search:
 # Whether swup is enabled
 swup: true
 
-# Datetime formatting 日期格式化
+# Datetime formatting
 datetime_foramt:
   post_card:
     type: date # date || updated
@@ -342,23 +354,23 @@ datetime_foramt:
     date: YY/MM/DD
     time: HH:mm
 
-# Home page category card configuration 分类卡片
+# Home page category card configuration
 categorie_card:
   enable: true
   len: 4
-  list: ["数码", "阅读", "断章", "日记"]
+  list: ["生活漫游", "呓语断章", "数码技术", "年度总结"]
 
-# Lower right button 
+# Lower right button
 rightside:
   readmode: true
-  aside: false
+  aside: true
 
 # Replace Broken Images 
 error_img:
-  flink: /img/friend_404.gif
-  post_page: /img/404.jpg
+  flink: /images/friend_404.gif
+  post_page: /images/post_404.jpg
 
-# Code highlighting configuration 
+# Code highlighting configuration
 highlight:
   theme: true # 
   title: default # mac | default
@@ -366,3 +378,58 @@ highlight:
   lang: true # show the code language
   code_word_wrap: fasle #
   height_limit: 200 # unit: px
+
+# Customize the template path
+layout:
+  path: layout
+  # layout
+  main:  _partial/main
+  header: _partial/header
+  banner: _partial/banner
+  sidebar: _partial/sidebar/index
+  footer: _partial/footer
+  # post
+  post_info: _partial/post/post-info
+  post_content: _partial/post/post-content
+  reward: _partial/post/reward
+  post_copyright: _partial/post/post-copyright
+  post_next_prev: _partial/post/post-next-prev
+  post_card: _partial/post/post-card
+  post_card_mini: _partial/post/post-card-mini
+  # widget
+  header_logo: _widget/header-logo
+  header_menu: _widget/header-menu
+  header_theme: _widget/header-theme
+  header_search: _widget/header-search
+  categorie: _widget/categorie
+  paginator: _widget/paginator
+  fixed_btn: _widget/fixed-btn
+  post_toc: _widget/post-toc
+	about_card: _widget/about-card
+	search: _widget/search
+  sidebar_user: _partial/sidebar/card/user
+  sidebar_social: _partial/sidebar/card/social
+  sidebar_info: _partial/sidebar/card/info
+  sidebar_email: _partial/sidebar/card/email
+  # third-party
+  comment: _third-party/comment/index
+  analytics: _third-party/web-analytics
+  # animation
+  page_loading: _partial/preloader/page-preloader
+  mode_change:  _partial/preloader/change-mode-preloader
+  # page
+  page_about: _partial/page/about
+  page_archive: _partial/page/archive
+  page_category: _partial/page/category
+  page_index: _partial/page/index
+  page_links: _partial/page/links
+  page_post: _partial/page/post
+  page_tag: _partial/page/tag
+	# other
+	script: _partial/script
+	head: _partial/head
+
+not_found: 
+	path: /
+	name: not_found.name
+	text: not_found.text
