@@ -7,15 +7,15 @@
 <meta name="full-screen" content="yes">
 <meta name="theme-color" content="#317EFB" />
 <meta content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=0" name="viewport">
-<meta name="description" content="折腾黑苹果的理由有很多，但究其根本，还是源于 Mac 设备高昂的价格与极高的试错成本。不过遗憾的是，随着 Apple 投向 ARM 的怀抱发布了 M1 芯片，黑苹果的死期已在无声中划定。所以一句话，且折腾且珍惜。由于我不再对苹果生态抱有念想，所以继续使用黑苹果已经意义不大，再加上重装 Windows 后 OpenCore 引导出现了问题，大概率只能格盘重装，于是借此机会坦然下车了。（不过文中的链">
+<meta name="description" content="注意：本文已不再维护，请仔细甄别内容的时效性  种植预警 请谨慎对待任何深入系统底层与 BIOS 的操作，拒绝“无知者无畏”。 不存在“完美”的黑苹果，或多或少会存在影响使用体验的问题。若做主力系统，请三思。 安装黑苹果的重要前提是，设备的硬件信息（CPU 与 GPU）应尽可能接近已发布的 Mac 产品，所以请事先调查设备是否存在运行黑苹果的可能。黑苹果的实现可简单理解为，通过仿冒 Mac 设备">
 <meta property="og:type" content="article">
 <meta property="og:title" content="黑苹果种植指南">
 <meta property="og:url" content="https://wangzai-zzy.github.io/2023/01/05/%E6%95%B0%E7%A0%81%E6%8A%80%E6%9C%AF/%E9%BB%91%E8%8B%B9%E6%9E%9C%E7%A7%8D%E6%A4%8D%E6%8C%87%E5%8D%97/index.html">
 <meta property="og:site_name" content="无闻沙洲">
-<meta property="og:description" content="折腾黑苹果的理由有很多，但究其根本，还是源于 Mac 设备高昂的价格与极高的试错成本。不过遗憾的是，随着 Apple 投向 ARM 的怀抱发布了 M1 芯片，黑苹果的死期已在无声中划定。所以一句话，且折腾且珍惜。由于我不再对苹果生态抱有念想，所以继续使用黑苹果已经意义不大，再加上重装 Windows 后 OpenCore 引导出现了问题，大概率只能格盘重装，于是借此机会坦然下车了。（不过文中的链">
+<meta property="og:description" content="注意：本文已不再维护，请仔细甄别内容的时效性  种植预警 请谨慎对待任何深入系统底层与 BIOS 的操作，拒绝“无知者无畏”。 不存在“完美”的黑苹果，或多或少会存在影响使用体验的问题。若做主力系统，请三思。 安装黑苹果的重要前提是，设备的硬件信息（CPU 与 GPU）应尽可能接近已发布的 Mac 产品，所以请事先调查设备是否存在运行黑苹果的可能。黑苹果的实现可简单理解为，通过仿冒 Mac 设备">
 <meta property="og:locale">
 <meta property="article:published_time" content="2023-01-05T13:00:00.000Z">
-<meta property="article:modified_time" content="2025-02-12T10:05:54.213Z">
+<meta property="article:modified_time" content="2025-03-08T08:04:10.374Z">
 <meta property="article:author" content="汪崽zzy">
 <meta name="twitter:card" content="summary">
 
@@ -60,8 +60,8 @@
 
 
 <!-- Variable -->
-<script>window.ASYNC_CONFIG = {"hostname":"wangzai-zzy.github.io","author":"汪崽zzy","root":"/","typed_text":["但行好事，莫问前程"],"theme_version":"2.2.4","theme":{"switch":true,"default":"style-light"},"favicon":{"logo":"/images/favicon.png","icon16":"/images/favicon.png","icon32":"/images/favicon.png","apple_touch_icon":"/images/favicon.png","webmanifest":null,"visibilitychange":false,"hidden":"/failure.ico","show_text":"(/≧▽≦/)咦！又好了！","hide_text":"(●—●)喔哟，崩溃啦！","dark_logo":"/images/favicon_dark.png"},"i18n":{"placeholder":"搜索文章...","empty":"找不到您查询的内容: ${query}","hits":"找到 ${hits} 条结果","hits_time":"找到 ${hits} 条结果（用时 ${time} 毫秒）","author":"本文作者：","copyright_link":"本文链接：","copyright_license_title":"版权声明：","copyright_license_content":"本博客所有文章除特别声明外，均默认采用 undefined 许可协议。","copy_success":"复制成功","copy_failure":"复制失败","open_read_mode":"进入阅读模式","exit_read_mode":"退出阅读模式","notice_outdate_message":"距离上次更新已经 undefined 天了, 文章内容可能已经过时。","sticky":"置顶","just":"刚刚","min":"分钟前","hour":"小时前","day":"天前","month":"个月前"},"swup":true,"plugin":{"flickr_justified_gallery":"https://unpkg.com/flickr-justified-gallery@latest/dist/fjGallery.min.js"},"icons":{"sun":"iconfont icon-sun","moon":"iconfont icon-moon","play":"iconfont icon-play-circle","email":"iconfont icon-envelope","next":"iconfont icon-arrow-alt-circle-rig","calendar":"iconfont icon-calendar-alt","clock":"iconfont icon-clock","user":"iconfont icon-user1","back_top":"iconfont icon-arrow-alt-circle-up","close":"iconfont icon-times-circle","search":"iconfont icon-search","reward":"iconfont icon-hand-holding-usd","toc_tag":"iconfont icon-th-list","read":"iconfont icon-book-reader","arrows":"iconfont icon-arrows-alt-h","double_arrows":"iconfont icon-angle-double-down","copy":"iconfont icon-copy","user_tag":"iconfont icon-user"},"icontype":"font","highlight":{"plugin":"highlighjs","theme":true,"copy":true,"lang":true,"title":"default","height_limit":200},"toc":{"post_title":true},"live_time":{"start_time":"","prefix":"博客已萌萌哒运行 undefined 天"},"danmu":{"enable":false,"el":".trm-banner"}};</script>
-<script id="async-page-config">window.PAGE_CONFIG = {"isPost":true,"isHome":false,"postUpdate":"2025-02-12 18:05:54"};</script>
+<script>window.ASYNC_CONFIG = {"hostname":"wangzai-zzy.github.io","author":"汪崽zzy","root":"/","typed_text":["世事诡谲，谨致良知","但行好事，莫问前程"],"theme_version":"2.2.4","theme":{"switch":true,"default":"style-light"},"favicon":{"logo":"/images/favicon.png","icon16":"/images/favicon.png","icon32":"/images/favicon.png","apple_touch_icon":"/images/favicon.png","webmanifest":null,"visibilitychange":false,"hidden":"/failure.ico","show_text":"(/≧▽≦/)咦！又好了！","hide_text":"(●—●)喔哟，崩溃啦！","dark_logo":"/images/favicon_dark.png"},"i18n":{"placeholder":"搜索文章...","empty":"找不到您查询的内容: ${query}","hits":"找到 ${hits} 条结果","hits_time":"找到 ${hits} 条结果（用时 ${time} 毫秒）","author":"本文作者：","copyright_link":"本文链接：","copyright_license_title":"版权声明：","copyright_license_content":"本博客所有文章除特别声明外，均默认采用 undefined 许可协议。","copy_success":"复制成功","copy_failure":"复制失败","open_read_mode":"进入阅读模式","exit_read_mode":"退出阅读模式","notice_outdate_message":"距离上次更新已经 undefined 天了, 文章内容可能已经过时。","sticky":"置顶","just":"刚刚","min":"分钟前","hour":"小时前","day":"天前","month":"个月前"},"swup":true,"plugin":{"flickr_justified_gallery":"https://unpkg.com/flickr-justified-gallery@latest/dist/fjGallery.min.js"},"icons":{"sun":"iconfont icon-sun","moon":"iconfont icon-moon","play":"iconfont icon-play-circle","email":"iconfont icon-envelope","next":"iconfont icon-arrow-alt-circle-rig","calendar":"iconfont icon-calendar-alt","clock":"iconfont icon-clock","user":"iconfont icon-user1","back_top":"iconfont icon-arrow-alt-circle-up","close":"iconfont icon-times-circle","search":"iconfont icon-search","reward":"iconfont icon-hand-holding-usd","toc_tag":"iconfont icon-th-list","read":"iconfont icon-book-reader","arrows":"iconfont icon-arrows-alt-h","double_arrows":"iconfont icon-angle-double-down","copy":"iconfont icon-copy","user_tag":"iconfont icon-user"},"icontype":"font","highlight":{"plugin":"highlighjs","theme":true,"copy":true,"lang":true,"title":"default","height_limit":200},"toc":{"post_title":true},"live_time":{"start_time":"","prefix":"博客已萌萌哒运行 undefined 天"},"danmu":{"enable":false,"el":".trm-banner"}};</script>
+<script id="async-page-config">window.PAGE_CONFIG = {"isPost":true,"isHome":false,"postUpdate":"2025-03-08 16:04:10"};</script>
 
 <!-- Theme mode css -->
 <link data-swup-theme rel="stylesheet" href="/css/index.css?v=2.2.4" id="trm-switch-style">
@@ -362,9 +362,8 @@
 <div class="trm-card ">
     <article id="article-container" class="trm-publication">
     <blockquote>
-<p>折腾黑苹果的理由有很多，但究其根本，还是源于 Mac 设备高昂的价格与极高的试错成本。不过遗憾的是，随着 Apple 投向 ARM 的怀抱发布了 M1 芯片，黑苹果的死期已在无声中划定。所以一句话，且折腾且珍惜。<br>由于我不再对苹果生态抱有念想，所以继续使用黑苹果已经意义不大，再加上重装 Windows 后 OpenCore 引导出现了问题，大概率只能格盘重装，于是借此机会坦然下车了。（不过文中的链接均会尽可能指向官方项目地址，大部分还是具有时效性的）</p>
+<p>注意：本文已不再维护，请仔细甄别内容的时效性</p>
 </blockquote>
-<p>网络上资料很多，其中不乏大量的英文文档与计算机专业知识，所以打算在此总结一下我的黑苹果之旅。不会很复杂很深入，只是停留在“照猫画虎”的层级上。</p>
 <h1 id="种植预警"><a href="#种植预警" class="headerlink" title="种植预警"></a>种植预警</h1><ol>
 <li>请谨慎对待任何深入系统底层与 BIOS 的操作，拒绝“无知者无畏”。</li>
 <li>不存在“完美”的黑苹果，或多或少会存在影响使用体验的问题。若做主力系统，请三思。</li>
@@ -570,17 +569,17 @@
     <div class="trm-older-publications-card trm-scroll-animation trm-active-el">
         <div class="trm-older-publication">
             
-            <a class="trm-op-top trm-anima-link" href="/2023/01/01/%E6%97%A5%E6%9C%89%E6%89%80%E8%AE%B0/%E4%BA%8C%E3%80%87%E4%BA%8C%E4%B8%89/">
+            <a class="trm-op-top trm-anima-link" href="/2022/12/30/%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/%E3%80%902022%E3%80%91%E6%AD%A4%E5%BF%83%E5%AE%89%E5%A4%84%E6%98%AF%E5%90%BE%E4%B9%A1/">
                 <span class="trm-op-cover">
-                    <img alt="cover" class="no-fancybox" src="https://s2.loli.net/2024/08/30/whj3pW52qJ6Yor4.jpg">
+                    <img alt="cover" class="no-fancybox" src="https://s2.loli.net/2022/12/30/b9Ag57J3PZXCwrM.jpg">
                 </span>
-                <h6 class="trm-op-title">二〇二三</h6>
+                <h6 class="trm-op-title">【2022】此心安处是吾乡</h6>
             </a>
             <div class="trm-divider trm-mb-15 trm-mt-20"></div>
             <ul class="trm-card-data trm-label">
-                <li>23/01/01</li>
-                <li>00:00</li>
-                <li>日有所记</li>
+                <li>22/12/30</li>
+                <li>22:00</li>
+                <li>年度总结</li>
             </ul>
         </div>
     </div>
