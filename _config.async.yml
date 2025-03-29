@@ -108,34 +108,29 @@ banner:
   default:
     type: img
     bgurl: https://s2.loli.net/2024/07/29/bUwSQrg95tfeiHN.jpg
-    banner_text: 
     position: top
     fit: cover
   index:
     type: img
     bgurl: https://s2.loli.net/2024/07/29/1G96t2w7XDENdf4.jpg
     bannerTitle: 我知道，<br>是流星赞美了黑夜，<br>鲸鱼安慰了大海。
-    bannerText: 
   archive:
     type: img
     bgurl: https://s2.loli.net/2024/07/29/4G2KZkqmz8QlHY9.jpg
     bannerTitle: 漫游者向清晨绿色的地带降落，<br>万物燃烧。
-    bannerText: 
   links:
     type: img
-    bgurl: https://s2.loli.net/2024/07/29/7qSjfYhK62cugXV.jpg
-    bannerTitle: 未闻花名，<br>犹记繁花。
-    bannerText: 
+    bgurl: https://s2.loli.net/2025/03/29/jzxQqV5XBPZ1Dkt.jpg
+    bannerTitle: 并非因为信任才去了解，<br>而是因为想要信任、想要了解。
   about:
     type: img
-    bgurl: https://s2.loli.net/2024/07/29/EHcjLsW7z4d6T9g.jpg
-    bannerTitle: 直面恐惧，斩断循环；<br>拥抱过去，创造未来。
-    bannerText: 
+    bgurl: https://s2.loli.net/2025/03/29/BmnrKGcloT3NSwa.jpg
+    bannerTitle: FACE THE SIN, <br>SAVE THE E.G.O.
 
 # Sidebar settings
 sidebar:
   typed_text_prefix: 
-  typed_text: [ '但行好事，莫问前程' ]
+  typed_text: [ '世事诡谲，谨致良知', '但行好事，莫问前程' ]
   info: 
     - key: Residence
       val: Mars
@@ -156,7 +151,7 @@ sidebar:
 # About page settings
 about:
 	insert: none # before | after | none
-  title: 整理一些学习过程中的笔记，书写一些风花雪月的文字，以及诉说一名旅者的故事。
+  title: 世事诡谲，谨致良知；但行好事，莫问前程。
   introduction: 
     嗨！这里是<strong>汪崽zzy</strong>，欢迎光临我的小破站🎉。
     <br><br>
@@ -179,13 +174,13 @@ about:
     A：摄影、健身、系统学习羽毛球、日语等等，当然除了这些最想做的还是找个能合得来的男朋友hhh。
     <br><br>
     Q：MBTI是什么？<br>
-    A：目前大概是INFP，之前也有测出过ISFJ与ISFP。
+    A：目前是INFP，之前也有测出过ISFJ与ISFP。
   blog: 
     <ul class="trm-list">
-      <li>主页配图：<a href="http://www.uchor.com/U/1024975">「四日火光节」-by. 狛纳世界</a></li>
-      <li>归档配图：<a href="https://hanyijie.lofter.com/post/d7b61_1cc897861">「艾雅法拉」-by. 韩一杰</a></li>
-      <li>链接配图：<a href="http://www.uchor.com/U/1024975">「夜市」-by. 狛纳世界</a></li>
-      <li>关于配图：<a href="https://x.com/gggggoou/status/1815365337795445176">「未命名」-by. gow</a></li>
+      <li>主页顶栏图：<a href="http://www.uchor.com/U/1024975">「四日火光节」-by. 狛纳世界</a></li>
+      <li>归档顶栏图：<a href="https://hanyijie.lofter.com/post/d7b61_1cc897861">「艾雅法拉」-by. 韩一杰</a></li>
+      <li>链接顶栏图：<a href="https://x.com/gggggoou/status/1815365337795445176">by. gow</a></li>
+      <li>链接顶栏图：<a href="https://x.com/paofannu/status/1900508030904758372">「阿米娅」by. paofannu</a></li>
     </ul>
 
 # Footer settings
