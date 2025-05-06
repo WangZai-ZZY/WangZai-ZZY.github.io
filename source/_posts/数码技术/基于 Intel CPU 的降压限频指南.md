@@ -27,7 +27,7 @@ banner:
 ## 主界面 - 左侧
 <img src="https://s2.loli.net/2023/02/05/DU4ympMhRIFzeTu.png" alt="image-20230205115706894" style="zoom: 75%;" />
 
-在最上面的红框中有四个单选项：选择配置文件，默认有4个，分别是 Performance、Game、Internet、Battery。
+在最上面的红框中有四个单选项：选择配置文件，默认有4个，分别是 Performance、Game、Internet、Battery。<br><br>
 
 而下面红框中的设置项与上面所选定的配置文件相对应：
 - **Clock Mod（时钟调制）**：【已过时，无需设置】
@@ -57,7 +57,7 @@ banner:
 ## 主界面 - 右侧
 <img src="https://s2.loli.net/2023/02/05/cYFMotQ1uWslgJx.png" alt="image-20230205120708702" style="zoom: 75%;" />
 
-在最上面的红框中显示的是 CPU 当前的电压、倍频、外频与核心频率，点击该区域可以使软件窗口最小化至托盘或任务栏。
+在最上面的红框中显示的是 CPU 当前的电压、倍频、外频与核心频率，点击该区域可以使软件窗口最小化至托盘或任务栏。<br><br>
 
 而下面的表格展现的是当前 CPU 各个线程（超线程选项打开）/内核（超线程关闭）的相关数据：
 - **FID**：当前线程/内核的实时倍频，通常等于 CPU 当前频率除以 FSB 时钟。
@@ -66,7 +66,7 @@ banner:
 - **℃**：当前线程/内核的实时温度。
 - **MAX**：当前线程/内核的最高温度。
 
-至于下面就是 CPU 各项数据的平均值，其中 **PKG/Max Power** 是指当前/最大记录到的功率。
+至于下面就是 CPU 各项数据的平均值，其中 **PKG/Max Power** 是指当前/最大记录到的功率。<br><br>
 
 再往下的几个按钮：
 - **Limits**：显示 CPU CORE、GPU、Ring 的降频原因。
@@ -81,7 +81,7 @@ banner:
 ## 子界面 - FIVR
 <img src="https://s2.loli.net/2023/02/05/reWqLvOpo5Unhya.png" alt="image-20230205140806331" style="zoom: 75%;" />
 
-此页面一般只需要关注中间这列的 CPU Core 和 CPU Cache 这俩常用设置项。
+此页面一般只需要关注中间这列的 CPU Core 和 CPU Cache 这俩常用设置项。<br><br>
 
 调整电压时，需要同时调整 Adaptive 选项下的 CPU Core 和 CPU Cache 的 Offset Voltage 值。至于降多少合适，可以自己一点点降进行测试（如果某次蓝屏了说明降得多了），也可以在网上找现成的数值。
 
