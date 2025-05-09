@@ -11,6 +11,14 @@ user:
   avatar: /images/avatar.png
   describe: 让情绪被看见，让痛苦被言说。
 
+# Individually configured friend link information
+links_info:
+  name: 无闻沙洲
+  url: https://wangzai-zzy.github.io
+  avatar: /images/avatar.png
+  describe: 让情绪被看见，让痛苦被言说。
+  rule_text: 暂不接受个人博客以外的友链申请，确保您的网站内容积极向上，文章至少5篇，原创70%以上，部署HTTPS。
+
 # Configure the icon information of the site
 favicon:
   logo: /images/favicon.png
@@ -113,19 +121,19 @@ banner:
   index:
     type: img
     bgurl: https://s2.loli.net/2024/07/29/1G96t2w7XDENdf4.jpg
-    bannerTitle: 我知道，<br>是流星赞美了黑夜，<br>鲸鱼安慰了大海。
+    banner_title: 我知道，<br>是流星赞美了黑夜，<br>鲸鱼安慰了大海。
   archive:
     type: img
     bgurl: https://s2.loli.net/2024/07/29/4G2KZkqmz8QlHY9.jpg
-    bannerTitle: 漫游者向清晨绿色的地带降落，<br>万物燃烧。
+    banner_title: 漫游者向清晨绿色的地带降落，<br>万物燃烧。
   links:
     type: img
     bgurl: https://s2.loli.net/2025/03/29/jzxQqV5XBPZ1Dkt.jpg
-    bannerTitle: 并非因为信任才去了解，<br>而是因为想要信任、想要了解。
+    banner_title: 并非因为信任才去了解，<br>而是因为想要信任、想要了解。
   about:
     type: img
     bgurl: https://s2.loli.net/2025/03/29/BmnrKGcloT3NSwa.jpg
-    bannerTitle: FACE THE SIN, <br>SAVE THE E.G.O.
+    banner_title: FACE THE SIN, <br>SAVE THE E.G.O.
 
 # Sidebar settings
 sidebar:
@@ -155,8 +163,8 @@ about:
   introduction: 
     嗨！这里是<strong>汪崽zzy</strong>，欢迎光临我的博客🎉！
     <br><br>
-    我一直觉得，标签只能降低交往的成本，无法真正触及一个人的内在。
-    而人与人之间真正的理解与关怀，是从承认对方行为具有正当性、触碰并接洽对方情感开始的。
+    我一直觉得，标签只能降低交往的成本，无法真正触及一个人的内在。<br>
+    人与人之间的理解与关怀，是从承认对方行为具有正当性、触碰并接洽对方情感开始的。
     <br><br>
     所以，我选择了博客这一形式，希望通过文字这一载体，寄宿我的情感，向光临此地的访问者传达。
     无论你是否对我讲述的故事产生了兴趣，我都十分感谢你的到访——<br>
@@ -339,7 +347,7 @@ datetime_foramt:
 categorie_card:
   enable: true
   len: 4
-  list: ["随笔", "呓语", "数码技术", "年度总结"]
+  list: ["数码", "随笔", "呓语", "年度总结"]
 
 # Lower right button
 rightside:
