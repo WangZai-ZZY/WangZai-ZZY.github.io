@@ -7,27 +7,23 @@
 <meta name="full-screen" content="yes">
 <meta name="theme-color" content="#317EFB" />
 <meta content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=0" name="viewport">
-<meta name="description" content="通过降低 CPU 功耗，来降低整机功耗，延长笔记本续航时间，顺带提高性能释放的“性价比”。  软件选择 XTU（Inter® Extreme Tuning Utility）   XTU 只对部分 CPU 解锁了全部功能，具体可在下载页面查看 CPU 支持情况。 简要结论： 后缀为 X、XE、K、KF、KS、HK 的 i3&#x2F;i5&#x2F;i7&#x2F;i9 CPU 受支持。 移动端">
+<meta name="description" content="种类机械键盘、薄膜键盘、静电容键盘 产品维度1. 键盘配列 主键区，包括数字字母区以及常用的修饰键，是文本操作的主要区域； 功能键区，包括 Esc 以及 F1 - F12 十二颗功能键； 指令键区，包括 PrtSc &#x2F; SysRq、Scroll Lock、Pause&#x2F;Break 三颗按键； 编辑键区，包括四枚方向键以及六颗负责操作及定位指针的按键； 数字键盘区，包括整个小键盘。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="基于 Intel CPU 的降压限频指南">
-<meta property="og:url" content="https://wangzai-zzy.github.io/2023/02/05/%E6%95%B0%E7%A0%81%E6%8A%80%E6%9C%AF/%E5%9F%BA%E4%BA%8E%20Intel%20CPU%20%E7%9A%84%E9%99%8D%E5%8E%8B%E9%99%90%E9%A2%91%E6%8C%87%E5%8D%97/index.html">
+<meta property="og:title" content="机械键盘调查">
+<meta property="og:url" content="https://wangzai-zzy.github.io/2024/03/29/%E6%95%B0%E7%A0%81/%E6%9C%BA%E6%A2%B0%E9%94%AE%E7%9B%98%E8%B0%83%E6%9F%A5/index.html">
 <meta property="og:site_name" content="无闻沙洲">
-<meta property="og:description" content="通过降低 CPU 功耗，来降低整机功耗，延长笔记本续航时间，顺带提高性能释放的“性价比”。  软件选择 XTU（Inter® Extreme Tuning Utility）   XTU 只对部分 CPU 解锁了全部功能，具体可在下载页面查看 CPU 支持情况。 简要结论： 后缀为 X、XE、K、KF、KS、HK 的 i3&#x2F;i5&#x2F;i7&#x2F;i9 CPU 受支持。 移动端">
+<meta property="og:description" content="种类机械键盘、薄膜键盘、静电容键盘 产品维度1. 键盘配列 主键区，包括数字字母区以及常用的修饰键，是文本操作的主要区域； 功能键区，包括 Esc 以及 F1 - F12 十二颗功能键； 指令键区，包括 PrtSc &#x2F; SysRq、Scroll Lock、Pause&#x2F;Break 三颗按键； 编辑键区，包括四枚方向键以及六颗负责操作及定位指针的按键； 数字键盘区，包括整个小键盘。">
 <meta property="og:locale">
 <meta property="og:image" content="https://wangzai-zzy.github.io/images/post_404.jpg">
 <meta property="og:image" content="https://wangzai-zzy.github.io/images/post_404.jpg">
-<meta property="og:image" content="https://wangzai-zzy.github.io/images/post_404.jpg">
-<meta property="og:image" content="https://wangzai-zzy.github.io/images/post_404.jpg">
-<meta property="og:image" content="https://wangzai-zzy.github.io/images/post_404.jpg">
-<meta property="og:image" content="https://wangzai-zzy.github.io/images/post_404.jpg">
-<meta property="article:published_time" content="2023-02-05T04:00:00.000Z">
-<meta property="article:modified_time" content="2025-05-06T12:26:41.868Z">
+<meta property="article:published_time" content="2024-03-28T16:00:00.000Z">
+<meta property="article:modified_time" content="2025-05-09T01:21:40.158Z">
 <meta property="article:author" content="汪崽zzy">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://wangzai-zzy.github.io/images/post_404.jpg">
 
 
-<title >基于 Intel CPU 的降压限频指南</title>
+<title >机械键盘调查</title>
 
 <!-- Favicon -->
 
@@ -68,7 +64,7 @@
 
 <!-- Variable -->
 <script>window.ASYNC_CONFIG = {"hostname":"wangzai-zzy.github.io","author":"汪崽zzy","root":"/","typed_text":["世事诡谲，谨致良知","但行好事，莫问前程"],"theme_version":"2.2.6","theme":{"switch":true,"default":"style-light"},"favicon":{"logo":"/images/favicon.png","icon16":"/images/favicon.png","icon32":"/images/favicon.png","apple_touch_icon":"/images/favicon.png","webmanifest":null,"visibilitychange":false,"hidden":"/failure.ico","show_text":"(/≧▽≦/)咦！又好了！","hide_text":"(●—●)喔哟，崩溃啦！","dark_logo":"/images/favicon_dark.png"},"i18n":{"placeholder":"搜索文章...","empty":"找不到您查询的内容: ${query}","hits":"找到 ${hits} 条结果","hits_time":"找到 ${hits} 条结果（用时 ${time} 毫秒）","author":"本文作者：","copyright_link":"本文链接：","copyright_license_title":"版权声明：","copyright_license_content":"本博客所有文章除特别声明外，均默认采用 undefined 许可协议。","copy_success":"复制成功","copy_failure":"复制失败","open_read_mode":"进入阅读模式","exit_read_mode":"退出阅读模式","notice_outdate_message":"距离上次更新已经 undefined 天了, 文章内容可能已经过时。","sticky":"置顶","just":"刚刚","min":"分钟前","hour":"小时前","day":"天前","month":"个月前"},"swup":true,"plugin":{"flickr_justified_gallery":"https://unpkg.com/flickr-justified-gallery@latest/dist/fjGallery.min.js"},"icons":{"sun":"iconfont icon-sun","moon":"iconfont icon-moon","play":"iconfont icon-play-circle","email":"iconfont icon-envelope","next":"iconfont icon-arrow-alt-circle-rig","calendar":"iconfont icon-calendar-alt","clock":"iconfont icon-clock","user":"iconfont icon-user1","back_top":"iconfont icon-arrow-alt-circle-up","close":"iconfont icon-times-circle","search":"iconfont icon-search","reward":"iconfont icon-hand-holding-usd","toc_tag":"iconfont icon-th-list","read":"iconfont icon-book-reader","arrows":"iconfont icon-arrows-alt-h","double_arrows":"iconfont icon-angle-double-down","copy":"iconfont icon-copy","user_tag":"iconfont icon-user"},"icontype":"font","highlight":{"plugin":"highlighjs","theme":true,"copy":true,"lang":true,"title":"default","height_limit":200},"toc":{"post_title":true},"live_time":{"start_time":"","prefix":"博客已萌萌哒运行 undefined 天"},"danmu":{"enable":false,"el":".trm-banner"}};</script>
-<script id="async-page-config">window.PAGE_CONFIG = {"isPost":true,"isHome":false,"postUpdate":"2025-05-06 20:26:41"};</script>
+<script id="async-page-config">window.PAGE_CONFIG = {"isPost":true,"isHome":false,"postUpdate":"2025-05-09 09:21:40"};</script>
 
 <!-- Theme mode css -->
 <link data-swup-theme rel="stylesheet" href="/css/index.css?v=2.2.6" id="trm-switch-style">
@@ -212,7 +208,7 @@
     <div class="trm-banner">
     
     <!-- banner cover -->
-    <img style="object-position:top;object-fit:cover;" alt="banner" class="trm-banner-cover" src="https://s2.loli.net/2023/02/05/XEh9vrifQjAbDkl.jpg">
+    <img style="object-position:top;object-fit:cover;" alt="banner" class="trm-banner-cover" src="https://s2.loli.net/2025/05/09/KuykdPg4OQUonCh.png">
     <!-- banner cover end -->
     
 
@@ -231,7 +227,7 @@
                             NEWS LETTER
                         </div>
                         <h1 class="trm-mb-30 trm-hsmb-font">
-                            基于 Intel CPU 的降压限频指南
+                            机械键盘调查
                         </h1>
 
                         
@@ -241,7 +237,7 @@
                                 </li>
                                 <li>
                                     <span>
-                                        2023
+                                        2024
                                     </span>
                                 </li>
                             </ul>
@@ -350,13 +346,13 @@
     <div class="col-sm-4">
         <div class="trm-card trm-label trm-label-light text-center">
             <i class="iconfont iconfont icon-calendar-alt trm-icon"></i><br>
-            23/02/05
+            24/03/29
         </div>
     </div>
     <div class="col-sm-4">
         <div class="trm-card trm-label trm-label-light text-center">
             <i class="iconfont iconfont icon-clock trm-icon"></i><br>
-            12:00
+            00:00
         </div>
     </div>
     <div class="col-sm-4">
@@ -368,111 +364,168 @@
 </div>
 <div class="trm-card ">
     <article id="article-container" class="trm-publication">
-    <blockquote>
-<p>通过降低 CPU 功耗，来降低整机功耗，延长笔记本续航时间，顺带提高性能释放的“性价比”。</p>
+    <h1 id="种类"><a href="#种类" class="headerlink" title="种类"></a>种类</h1><p>机械键盘、薄膜键盘、静电容键盘</p>
+<h1 id="产品维度"><a href="#产品维度" class="headerlink" title="产品维度"></a>产品维度</h1><h2 id="1-键盘配列"><a href="#1-键盘配列" class="headerlink" title="1. 键盘配列"></a>1. 键盘配列</h2><ul>
+<li><strong>主键区</strong>，包括数字字母区以及常用的修饰键，是文本操作的主要区域；</li>
+<li><strong>功能键区</strong>，包括 Esc 以及 F1 - F12 十二颗功能键；</li>
+<li><strong>指令键区</strong>，包括 PrtSc &#x2F; SysRq、Scroll Lock、Pause&#x2F;Break 三颗按键；</li>
+<li><strong>编辑键区</strong>，包括四枚方向键以及六颗负责操作及定位指针的按键；</li>
+<li><strong>数字键盘区</strong>，包括整个小键盘。</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="center">主键区</th>
+<th align="center">功能键区</th>
+<th align="center">指令键区</th>
+<th align="center">编辑键区</th>
+<th align="center">数字键盘区</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">60% 配列</td>
+<td align="center">✅️</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">※</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">65% 配列</td>
+<td align="center">✅️</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">⭕️️</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">75% 配列</td>
+<td align="center">✅️</td>
+<td align="center">✅️</td>
+<td align="center">⭕️️</td>
+<td align="center">⭕️️</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">80% 配列</td>
+<td align="center">✅️</td>
+<td align="center">✅️</td>
+<td align="center">✅️</td>
+<td align="center">✅️</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">90% 配列</td>
+<td align="center">✅️</td>
+<td align="center">✅️</td>
+<td align="center">⭕️️</td>
+<td align="center">⭕️️</td>
+<td align="center">✅️</td>
+</tr>
+<tr>
+<td align="center">100% 配列</td>
+<td align="center">✅️</td>
+<td align="center">✅️</td>
+<td align="center">✅️</td>
+<td align="center">✅️</td>
+<td align="center">✅️</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>表格中：<br>⭕️️：该组配列中通常含有一部分本区按键<br>※：60% 配列中有极少数配列包含了方向键，但采用了非标准长度的左 Shift 键</p>
 </blockquote>
-<h1 id="软件选择"><a href="#软件选择" class="headerlink" title="软件选择"></a>软件选择</h1><ol>
-<li><a target="_blank" rel="noopener" href="https://www.intel.cn/content/www/cn/zh/download/17881/29183/intel-extreme-tuning-utility-intel-xtu.html">XTU（Inter® Extreme Tuning Utility）</a></li>
+<h2 id="2-轴体："><a href="#2-轴体：" class="headerlink" title="2. 轴体："></a>2. 轴体：</h2><p><strong>Clicky（响声段落轴 &#x2F; 类青轴）：</strong></p>
+<ul>
+<li>优点：声音清脆，确认感强，有非常明显的打击回馈；</li>
+<li>缺点：不适合在公共场所使用，寿命相对更短，长时间使用更容易疲劳。</li>
+</ul>
+<p><strong>Tactile（段落轴 &#x2F; 类茶轴）：</strong></p>
+<ul>
+<li>优点：有按键确认感，手感更柔和，长时间使用更舒适；</li>
+<li>缺点：段落感偏弱，量产茶轴手感平庸。</li>
+</ul>
+<p><strong>Linear（线性轴 &#x2F; 类红轴）：</strong></p>
+<ul>
+<li>优点：无段落感，更适合长时间使用，量产键盘中有更多功能性轴体选择；</li>
+<li>缺点：没有明确的物理回馈感，可能增加误触机率。</li>
+</ul>
+<h2 id="3-附加功能："><a href="#3-附加功能：" class="headerlink" title="3. 附加功能："></a>3. 附加功能：</h2><p>无线连接（蓝牙&#x2F;2.4G）</p>
+<ul>
+<li>蓝牙版本不要低于 4.0；</li>
+<li>注意看键盘是单模无线还是双模以上无线，结合你的使用设备考虑是否合理；</li>
+<li>如果你要在台式机上使用无线连接，避免把接收器插在机箱后侧的接口上。</li>
+</ul>
+<p>背光（RGB&#x2F;键帽材质）</p>
+<ul>
+<li>如果希望常开灯效，并且没什么后续换键帽的打算，最好直接选择原装 PBT 材质键帽的键盘，采用二色成型工艺的更好。</li>
+<li>如果不在乎打油，那就无所谓了，尽情在 RGB 的原野上奔驰吧。</li>
+</ul>
+<p>系统支持（Win&#x2F;Mac）</p>
+<p>轴体热插拔</p>
+<h1 id="轴体研究"><a href="#轴体研究" class="headerlink" title="轴体研究"></a>轴体研究</h1><h2 id="大致分类（仅供参考）"><a href="#大致分类（仅供参考）" class="headerlink" title="大致分类（仅供参考）"></a>大致分类（仅供参考）</h2><img src="https://s2.loli.net/2025/05/09/sKjkLzX3dxWrqNZ.jpg" alt="轴体分类" style=""   data-tag='post-image' onload='this.onload=null;this.style.opacity=1;' loading="lazy" onerror='this.onerror=null;this.src="/images/post_404.jpg"'/>
+
+<h2 id="2023年国产轴体推荐合集（整理自UP：龙翔可乐）"><a href="#2023年国产轴体推荐合集（整理自UP：龙翔可乐）" class="headerlink" title="2023年国产轴体推荐合集（整理自UP：龙翔可乐）"></a>2023年国产轴体推荐合集（整理自UP：龙翔可乐）</h2><h3 id="一、段落轴："><a href="#一、段落轴：" class="headerlink" title="一、段落轴："></a>一、段落轴：</h3><ol>
+<li>发声段落轴：<ul>
+<li>代表轴体：凯华BOX结构扭簧发声轴（BOX白V2、知夏、知秋；极地狐）</li>
+</ul>
+</li>
+<li>无声段落轴（类茶轴）：<ul>
+<li>代表轴体：樱桃茶轴</li>
+<li>类似轴体：佳达隆CAP茶、TTC金茶Pro</li>
+</ul>
+</li>
 </ol>
-<ul>
-<li>XTU 只对部分 CPU 解锁了全部功能，具体可在下载页面查看 CPU 支持情况。</li>
-<li>简要结论：<ul>
-<li>后缀为 X、XE、K、KF、KS、HK 的 i3&#x2F;i5&#x2F;i7&#x2F;i9 CPU 受支持。</li>
-<li>移动端 CPU 与低压 CPU 均不支持，即后缀为 H、U 等。</li>
+<h3 id="二、线性轴："><a href="#二、线性轴：" class="headerlink" title="二、线性轴："></a>二、线性轴：</h3><ol>
+<li>标准压力线性轴（类红轴）：<ul>
+<li>特点：45g的触发压力，2.0mm触发键程，4.0mm触底键程</li>
+<li>代表轴体：樱桃红轴</li>
+<li>类似轴体：凯华BOX红V2、冰淇淋Pro、TTC金红Pro、烈焰红V1</li>
 </ul>
 </li>
+<li>码字专用轴：<ul>
+<li>特点：37g的触发压力，2.0mm触发键程，4.0mm触底键程</li>
+<li>代表轴体：TTC金粉V2</li>
+<li>类似轴体：Leobog的太空金轴；康腾特的玉髓轴、月季粉；凯华的MX冰薄荷V2；佳达隆的G白pro3.0；九紫的相恋轴、相逢轴；海木的MO粉轴</li>
 </ul>
-<ol start="2">
-<li><a target="_blank" rel="noopener" href="https://www.techpowerup.com/download/techpowerup-throttlestop/">ThrottleStop</a></li>
+</li>
+<li>游戏专用轴：<ul>
+<li>特点：42g的触发压力，1.0mm触发键程，提前触底</li>
+<li>代表轴体：TTC快银V2</li>
+<li>类似轴体：凯华蓝莓冰淇淋、香草冰淇淋；康腾特的月魄轴；佳达隆的G银Pro3.0；九紫的相聚轴；高特的行云轴V2</li>
+</ul>
+</li>
+<li>标准压力声优轴：<ul>
+<li>特点：触发压力42-45g，触发键程2.0mm，提前触底</li>
+<li>代表轴体：康腾特的风信子轴</li>
+<li>类似轴体：旭华的阿尼亚轴；九紫的烟雨轴；TTC烈焰红V2；康腾特的星黛紫轴；高特幽蓝轴V2</li>
+</ul>
+</li>
+<li>兼顾游戏与码字的声优轴：<ul>
+<li>特点：触发压力42g，触发键程1.5mm，触底键程3.5mm</li>
+<li>代表轴体：Leobog灰木V4</li>
+<li>类似轴体：九紫烟青轴；凯华黑莓冰淇淋、琉光冰淇淋、极光冰淇淋；TTC钢铁轴、烈焰紫、烈焰雪、新月轴；海木飞机轴。</li>
+</ul>
+</li>
+<li>提前大段落轴（类HP轴）：<ul>
+<li>特点：段落感强，压力克数偏大，通常用在大健位</li>
+<li>代表轴体：圣熊猫轴</li>
+<li>类似轴体：凯华知冬轴；佳达隆小袋鼠轴；康腾特品月轴、KU段轴；海木MO绿轴；高特乖乖轴V2</li>
+</ul>
+</li>
 </ol>
-<ul>
-<li>无法使用 XTU 时，可以尝试使用 ThrottleStop 替代。</li>
-<li>本教程使用该方案。</li>
+<h3 id="三、静音轴："><a href="#三、静音轴：" class="headerlink" title="三、静音轴："></a>三、静音轴：</h3><ul>
+<li>特点：使用静音材料缓冲，触底有肉感，通常情况听感比薄膜键盘安静</li>
+<li>代表轴体：TTC静音红V3</li>
+<li>类似轴体：TTC冰静、茶静轴；凯华孤岛、鲸落轴；佳达隆cap静音红轴、康腾特静音酒红轴、清净轴、九紫相依轴、纯静轴；高特水蜜桃V2</li>
 </ul>
-<h1 id="ThrottleStop-界面介绍"><a href="#ThrottleStop-界面介绍" class="headerlink" title="ThrottleStop 界面介绍"></a>ThrottleStop 界面介绍</h1><img src="https://s2.loli.net/2023/02/05/vK9bLgoy8X37Y2S.png" alt="image-20230205102157963" style="zoom: 75%;"   data-tag='post-image' onload='this.onload=null;this.style.opacity=1;' loading="lazy" onerror='this.onerror=null;this.src="/images/post_404.jpg"'/>
+<h2 id="感兴趣的静音轴体表格对比"><a href="#感兴趣的静音轴体表格对比" class="headerlink" title="感兴趣的静音轴体表格对比"></a>感兴趣的静音轴体表格对比</h2><img src="https://s2.loli.net/2025/05/09/xkWjmDGAufLaehb.jpg" alt="静音轴体表格对比" style=""   data-tag='post-image' onload='this.onload=null;this.style.opacity=1;' loading="lazy" onerror='this.onerror=null;this.src="/images/post_404.jpg"'/>
 
-<h2 id="主界面-左侧"><a href="#主界面-左侧" class="headerlink" title="主界面 - 左侧"></a>主界面 - 左侧</h2><img src="https://s2.loli.net/2023/02/05/DU4ympMhRIFzeTu.png" alt="image-20230205115706894" style="zoom: 75%;"   data-tag='post-image' onload='this.onload=null;this.style.opacity=1;' loading="lazy" onerror='this.onerror=null;this.src="/images/post_404.jpg"'/>
-
-<p>在最上面的红框中有四个单选项：选择配置文件，默认有4个，分别是 Performance、Game、Internet、Battery。<br><br></p>
-<p>而下面红框中的设置项与上面所选定的配置文件相对应：</p>
-<ul>
-<li><strong>Clock Mod（时钟调制）</strong>：【已过时，无需设置】</li>
-<li><strong>Set Multiplier（倍频设置）</strong>：【已过时，无需设置】</li>
-<li><strong>Speed Shift EPP（动态调频设置）</strong>：【从 Skylake 架构（第六代酷睿）开始支持，可酌情设置】<ul>
-<li>Intel® Speed Shift Technology，即硬件自主根据提示工作量快速变化频率以获得最优能耗。调整其 EPP 参数可以影响 CPU 对任务的响应性能。比如当 CPU 利用率较低时，通过提高 CPU 主频，可以缩短任务运行时间。</li>
-<li>EPP 允许设置范围为 0~255 ：0 表示 CPU 更倾向于工作在最大睿频（性能），255 表示 CPU 更倾向于工作在较低频率（节能）。<ul>
-<li>插电&#x2F;希望获得最大性能：推荐设置在 0~32 之间。</li>
-<li>不插电&#x2F;希望延长电池使用时间：至少设置为 128。</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><strong>Power Saver（省电器）</strong>：【已过时，无需设置】</li>
-<li><strong>Disable Turbo（禁止睿频）</strong>：【一般情况下无需设置】<ul>
-<li>关闭 Turbo Boost，CPU 将保持在基础频率工作。</li>
-</ul>
-</li>
-<li><strong>SpeedStep</strong>：【Skylake 架构（第六代酷睿）之前的 CPU 支持，之后的无需设置】<ul>
-<li>通过软件对 CPU 进行动态频率调整，已被基于硬件的 Speed Shift 替代。</li>
-</ul>
-</li>
-<li><strong>BD PROCHOT（Bi-directional Processor Hot，双向处理器温控）</strong>：【可酌情设置】<ul>
-<li>开启时，当 CPU 或 GPU 任一个的温度超过设定阈值时，另一个无论处在何种温度下都会被降频处理，以控制设备的整体温度。</li>
-<li>一般来说是笔记本在玩游戏时 CPU 低温降频的元凶。</li>
-</ul>
-</li>
-<li><strong>C1E（C1E enhanced halt stat，增强型空闲电源管理状态转换）</strong>：【玄学，一般情况下无需设置】<ul>
-<li>关闭时，可以防止 CPU 睿频机制自动关闭某些核心。</li>
-</ul>
-</li>
-<li><strong>Task Bar（最小化到任务栏）</strong>：阻止 ThrottleStop 最小化到托盘，而是将其保留在任务栏中。</li>
-<li><strong>On Top（窗口置顶）</strong></li>
-<li><strong>Log File（启用日志）</strong></li>
-<li><strong>More Data（记录更多数据）</strong>：加快右侧表格数据更新频率，由每秒记录1次数据提高至每秒记录8次数据。</li>
-</ul>
-<p>最下面的三个按钮：Save（将当前设置存入 .ini 文件），Options（进入软件设置菜单），Turn On&#x2F;Off（已经没什么用了，只要软件在运行设置便会生效，想要暂停生效&#x2F;重置需要删除路径下的 .ini 文件并关闭电源，最好也可以重置一下 BIOS）。</p>
-<h2 id="主界面-右侧"><a href="#主界面-右侧" class="headerlink" title="主界面 - 右侧"></a>主界面 - 右侧</h2><img src="https://s2.loli.net/2023/02/05/cYFMotQ1uWslgJx.png" alt="image-20230205120708702" style="zoom: 75%;"   data-tag='post-image' onload='this.onload=null;this.style.opacity=1;' loading="lazy" onerror='this.onerror=null;this.src="/images/post_404.jpg"'/>
-
-<p>在最上面的红框中显示的是 CPU 当前的电压、倍频、外频与核心频率，点击该区域可以使软件窗口最小化至托盘或任务栏。<br><br></p>
-<p>而下面的表格展现的是当前 CPU 各个线程（超线程选项打开）&#x2F;内核（超线程关闭）的相关数据：</p>
-<ul>
-<li><strong>FID</strong>：当前线程&#x2F;内核的实时倍频，通常等于 CPU 当前频率除以 FSB 时钟。</li>
-<li><strong>C0%</strong>：当前线程&#x2F;内核处在其最高性能状态（C0）下的时间百分比，空闲时该数值较低，高负载时数值较高。</li>
-<li><strong>Mod</strong>：参考左侧配置中的 Clock Mod 选项，在现代 CPU 中应为100%。</li>
-<li><strong>℃</strong>：当前线程&#x2F;内核的实时温度。</li>
-<li><strong>MAX</strong>：当前线程&#x2F;内核的最高温度。</li>
-</ul>
-<p>至于下面就是 CPU 各项数据的平均值，其中 <strong>PKG&#x2F;Max Power</strong> 是指当前&#x2F;最大记录到的功率。<br><br></p>
-<p>再往下的几个按钮：</p>
-<ul>
-<li><strong>Limits</strong>：显示 CPU CORE、GPU、Ring 的降频原因。</li>
-<li><strong>FIVR</strong>：即 Fully Integrated Voltage Regulator，完全集成电压调节器，用于调整与 CPU 电压相关的内容。</li>
-<li><strong>TPL</strong>：即 Turbo Power Limit，用于调整与睿频相关的内容。</li>
-<li><strong>CLR</strong>：清零上面表格中的 MAX 记录值。<br>最下面就是 TS Bench（内置的基准测试程序，可检测在软件中的设置将对 CPU 产生怎样影响）、Batt （显示当前电池点亮）、GPU （显示当前 GPU 温度）。</li>
-</ul>
-<h2 id="子界面-Options"><a href="#子界面-Options" class="headerlink" title="子界面 - Options"></a>子界面 - Options</h2><img src="https://s2.loli.net/2023/02/05/zXejBl8uPZ13KTv.png" alt="image-20230205134606799" style="zoom: 75%;"   data-tag='post-image' onload='this.onload=null;this.style.opacity=1;' loading="lazy" onerror='this.onerror=null;this.src="/images/post_404.jpg"'/>
-
-<h2 id="子界面-FIVR"><a href="#子界面-FIVR" class="headerlink" title="子界面 - FIVR"></a>子界面 - FIVR</h2><img src="https://s2.loli.net/2023/02/05/reWqLvOpo5Unhya.png" alt="image-20230205140806331" style="zoom: 75%;"   data-tag='post-image' onload='this.onload=null;this.style.opacity=1;' loading="lazy" onerror='this.onerror=null;this.src="/images/post_404.jpg"'/>
-
-<p>此页面一般只需要关注中间这列的 CPU Core 和 CPU Cache 这俩常用设置项。<br><br></p>
-<p>调整电压时，需要同时调整 Adaptive 选项下的 CPU Core 和 CPU Cache 的 Offset Voltage 值。至于降多少合适，可以自己一点点降进行测试（如果某次蓝屏了说明降得多了），也可以在网上找现成的数值。</p>
-<h2 id="子界面-TPL"><a href="#子界面-TPL" class="headerlink" title="子界面 - TPL"></a>子界面 - TPL</h2><img src="https://s2.loli.net/2023/02/05/npiA85h3HI1GvUu.png" alt="image-20230205140830555" style="zoom: 75%;"   data-tag='post-image' onload='this.onload=null;this.style.opacity=1;' loading="lazy" onerror='this.onerror=null;this.src="/images/post_404.jpg"'/>
-
-<p>此页面一般只需要关注中间那个红框（Power Limit Controls）中的内容即可。</p>
-<ul>
-<li><strong>Long Power PL1</strong>：长时睿频功耗，允许 CPU 长时间运行的最大功耗，通常设定为 CPU 的 TDP。</li>
-<li><strong>Short Power PL2</strong>：短时睿频功耗，允许 CPU 在某段时间内可以达到的最大功耗上限。</li>
-<li><strong>Lock</strong>：在寄存器中将设置锁定，避免软件或系统对其进行修改。如果日后要解锁需要将该软件重置。</li>
-<li><strong>Clamp</strong>：勾选代表任何时候都遵循此设置，不勾选时仅在睿频时有效。例如 CPU 默频 3.4G，但是在 3.4G 时仍然超过所给功率限制（例如做密集 AVX 运算），勾选 Clamp 的情况会强制 CPU 继续降频直到满足功耗限制，不勾选的话则不会。</li>
-</ul>
 <h1 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h1><ol>
-<li><a target="_blank" rel="noopener" href="https://www.ultrabookreview.com/31385-the-throttlestop-guide">The ThrottleStop Guide (2023): How to Lower Temperatures, Increase Performance and Boost Battery Life</a></li>
-<li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/415865127">降频？不存在的，来看看Throttlestop</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.bilibili.com/read/cv12252445">xtu不能用？用游戏本神器 ThrottleStop 参数设置对 Intel 游戏本帧数优化教程，以9750h为例</a></li>
-</ol>
-<h1 id="扩展阅读"><a href="#扩展阅读" class="headerlink" title="扩展阅读"></a>扩展阅读</h1><ol>
-<li><a target="_blank" rel="noopener" href="https://blog.mygraphql.com/zh/notes/hw/hyper-threading/">被误解的CPU利用率、超线程、动态调频 —— CPU 性能之迷 Part 1</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.expreview.com/71943.html">笔记本中常说的PL1、PL2到底如何影响CPU性能？</a></li>
+<li><a target="_blank" rel="noopener" href="https://sspai.com/post/64972#">机械键盘自行选购指南：从只买一把到直入深坑</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.bilibili.com/read/cv32587157">键圈新手入坑指南——如何通过纸面参数辨别轴体类型</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV13c411r738">键圈新手入坑指南——2023国产轴体推荐合集</a></li>
+<li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/410112013">也许是全网最严谨最详细的机械轴体介绍？（长期更新）</a></li>
 </ol>
 
 </article>
@@ -493,6 +546,27 @@
     <div class="trm-older-publications-card trm-scroll-animation trm-active-el">
         <div class="trm-older-publication">
             
+            <a class="trm-op-top trm-anima-link" href="/2024/04/03/%E5%91%93%E8%AF%AD/%E9%9D%9E%E7%90%86%E6%80%A7%E4%B8%8E%E4%B9%8C%E6%89%98%E9%82%A6%E6%83%85%E7%BB%93/">
+                <span class="trm-op-cover">
+                    <img alt="cover" class="no-fancybox" src="https://s2.loli.net/2023/07/01/5ZFGNOk671lYgqS.jpg">
+                </span>
+                <h6 class="trm-op-title">非理性与乌托邦情结</h6>
+            </a>
+            <div class="trm-divider trm-mb-15 trm-mt-20"></div>
+            <ul class="trm-card-data trm-label">
+                <li>24/04/03</li>
+                <li>08:00</li>
+                <li>呓语</li>
+            </ul>
+        </div>
+    </div>
+</div>
+    
+    
+        <div class="col-lg-6">
+    <div class="trm-older-publications-card trm-scroll-animation trm-active-el">
+        <div class="trm-older-publication">
+            
             <a class="trm-op-top trm-anima-link" href="/2023/10/26/%E9%9A%8F%E7%AC%94/%E8%80%81%E6%AD%8C/">
                 <span class="trm-op-cover">
                     <img alt="cover" class="no-fancybox" src="https://s2.loli.net/2024/08/30/hVIcDM8FvwbNg6C.jpg">
@@ -504,27 +578,6 @@
                 <li>23/10/26</li>
                 <li>15:00</li>
                 <li>随笔</li>
-            </ul>
-        </div>
-    </div>
-</div>
-    
-    
-        <div class="col-lg-6">
-    <div class="trm-older-publications-card trm-scroll-animation trm-active-el">
-        <div class="trm-older-publication">
-            
-            <a class="trm-op-top trm-anima-link" href="/2023/01/05/%E6%95%B0%E7%A0%81%E6%8A%80%E6%9C%AF/%E9%BB%91%E8%8B%B9%E6%9E%9C%E7%A7%8D%E6%A4%8D%E6%8C%87%E5%8D%97/">
-                <span class="trm-op-cover">
-                    <img alt="cover" class="no-fancybox" src="https://s2.loli.net/2023/01/05/oDM23LfeTx5HSaV.jpg">
-                </span>
-                <h6 class="trm-op-title">黑苹果种植指南</h6>
-            </a>
-            <div class="trm-divider trm-mb-15 trm-mt-20"></div>
-            <ul class="trm-card-data trm-label">
-                <li>23/01/05</li>
-                <li>21:00</li>
-                <li>数码技术</li>
             </ul>
         </div>
     </div>
@@ -592,7 +645,7 @@
 				</span>
       </div>
       <div class="trm-post-toc-content">
-        <ol class="trm-toc"><li class="trm-toc-item trm-toc-level-1" title="软件选择"><a rel="nofollow" class="trm-toc-link" href="#软件选择"><span class="trm-toc-number">1.</span> <span class="trm-toc-text">软件选择</span></a></li><li class="trm-toc-item trm-toc-level-1" title="ThrottleStop 界面介绍"><a rel="nofollow" class="trm-toc-link" href="#ThrottleStop-界面介绍"><span class="trm-toc-number">2.</span> <span class="trm-toc-text">ThrottleStop 界面介绍</span></a><ol class="trm-toc-child"><li class="trm-toc-item trm-toc-level-2" title="主界面 - 左侧"><a rel="nofollow" class="trm-toc-link" href="#主界面-左侧"><span class="trm-toc-number">2.1.</span> <span class="trm-toc-text">主界面 - 左侧</span></a></li><li class="trm-toc-item trm-toc-level-2" title="主界面 - 右侧"><a rel="nofollow" class="trm-toc-link" href="#主界面-右侧"><span class="trm-toc-number">2.2.</span> <span class="trm-toc-text">主界面 - 右侧</span></a></li><li class="trm-toc-item trm-toc-level-2" title="子界面 - Options"><a rel="nofollow" class="trm-toc-link" href="#子界面-Options"><span class="trm-toc-number">2.3.</span> <span class="trm-toc-text">子界面 - Options</span></a></li><li class="trm-toc-item trm-toc-level-2" title="子界面 - FIVR"><a rel="nofollow" class="trm-toc-link" href="#子界面-FIVR"><span class="trm-toc-number">2.4.</span> <span class="trm-toc-text">子界面 - FIVR</span></a></li><li class="trm-toc-item trm-toc-level-2" title="子界面 - TPL"><a rel="nofollow" class="trm-toc-link" href="#子界面-TPL"><span class="trm-toc-number">2.5.</span> <span class="trm-toc-text">子界面 - TPL</span></a></li></ol></li><li class="trm-toc-item trm-toc-level-1" title="参考链接"><a rel="nofollow" class="trm-toc-link" href="#参考链接"><span class="trm-toc-number">3.</span> <span class="trm-toc-text">参考链接</span></a></li><li class="trm-toc-item trm-toc-level-1" title="扩展阅读"><a rel="nofollow" class="trm-toc-link" href="#扩展阅读"><span class="trm-toc-number">4.</span> <span class="trm-toc-text">扩展阅读</span></a></li></ol>
+        <ol class="trm-toc"><li class="trm-toc-item trm-toc-level-1" title="种类"><a rel="nofollow" class="trm-toc-link" href="#种类"><span class="trm-toc-number">1.</span> <span class="trm-toc-text">种类</span></a></li><li class="trm-toc-item trm-toc-level-1" title="产品维度"><a rel="nofollow" class="trm-toc-link" href="#产品维度"><span class="trm-toc-number">2.</span> <span class="trm-toc-text">产品维度</span></a><ol class="trm-toc-child"><li class="trm-toc-item trm-toc-level-2" title="1. 键盘配列"><a rel="nofollow" class="trm-toc-link" href="#1-键盘配列"><span class="trm-toc-number">2.1.</span> <span class="trm-toc-text">1. 键盘配列</span></a></li><li class="trm-toc-item trm-toc-level-2" title="2. 轴体："><a rel="nofollow" class="trm-toc-link" href="#2-轴体："><span class="trm-toc-number">2.2.</span> <span class="trm-toc-text">2. 轴体：</span></a></li><li class="trm-toc-item trm-toc-level-2" title="3. 附加功能："><a rel="nofollow" class="trm-toc-link" href="#3-附加功能："><span class="trm-toc-number">2.3.</span> <span class="trm-toc-text">3. 附加功能：</span></a></li></ol></li><li class="trm-toc-item trm-toc-level-1" title="轴体研究"><a rel="nofollow" class="trm-toc-link" href="#轴体研究"><span class="trm-toc-number">3.</span> <span class="trm-toc-text">轴体研究</span></a><ol class="trm-toc-child"><li class="trm-toc-item trm-toc-level-2" title="大致分类（仅供参考）"><a rel="nofollow" class="trm-toc-link" href="#大致分类（仅供参考）"><span class="trm-toc-number">3.1.</span> <span class="trm-toc-text">大致分类（仅供参考）</span></a></li><li class="trm-toc-item trm-toc-level-2" title="2023年国产轴体推荐合集（整理自UP：龙翔可乐）"><a rel="nofollow" class="trm-toc-link" href="#2023年国产轴体推荐合集（整理自UP：龙翔可乐）"><span class="trm-toc-number">3.2.</span> <span class="trm-toc-text">2023年国产轴体推荐合集（整理自UP：龙翔可乐）</span></a><ol class="trm-toc-child"><li class="trm-toc-item trm-toc-level-3" title="一、段落轴："><a rel="nofollow" class="trm-toc-link" href="#一、段落轴："><span class="trm-toc-number">3.2.1.</span> <span class="trm-toc-text">一、段落轴：</span></a></li><li class="trm-toc-item trm-toc-level-3" title="二、线性轴："><a rel="nofollow" class="trm-toc-link" href="#二、线性轴："><span class="trm-toc-number">3.2.2.</span> <span class="trm-toc-text">二、线性轴：</span></a></li><li class="trm-toc-item trm-toc-level-3" title="三、静音轴："><a rel="nofollow" class="trm-toc-link" href="#三、静音轴："><span class="trm-toc-number">3.2.3.</span> <span class="trm-toc-text">三、静音轴：</span></a></li></ol></li><li class="trm-toc-item trm-toc-level-2" title="感兴趣的静音轴体表格对比"><a rel="nofollow" class="trm-toc-link" href="#感兴趣的静音轴体表格对比"><span class="trm-toc-number">3.3.</span> <span class="trm-toc-text">感兴趣的静音轴体表格对比</span></a></li></ol></li><li class="trm-toc-item trm-toc-level-1" title="参考链接"><a rel="nofollow" class="trm-toc-link" href="#参考链接"><span class="trm-toc-number">4.</span> <span class="trm-toc-text">参考链接</span></a></li></ol>
       </div>
     </div>
 
