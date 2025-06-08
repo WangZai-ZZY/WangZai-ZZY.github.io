@@ -1,7 +1,7 @@
-# Open Graph protocol
+# Open Graph protocol | OG 协议
 open_graph: true
 
-# User info
+# User info | 用户信息
 user:
   name: 无闻沙洲
   first_name: 沙洲
@@ -11,7 +11,7 @@ user:
   avatar: /images/avatar.png
   describe: 让情绪被看见，让痛苦被言说。
 
-# Individually configured friend link information
+# Individually configured friend link information | 友链说明配置
 links_info:
   name: 无闻沙洲
   url: https://wangzai-zzy.github.io
@@ -19,37 +19,33 @@ links_info:
   describe: 让情绪被看见，让痛苦被言说。
   rule_text: 暂不接受个人博客以外的友链申请，确保您的网站内容积极向上，文章至少5篇，原创70%以上，部署HTTPS。
 
-# Configure the icon information of the site
+# Site logo | 网站图标
 favicon:
   logo: /images/favicon.png
   dark_logo: /images/favicon_dark.png
   icon16: /images/favicon.png
   icon32: /images/favicon.png
   apple_touch_icon: /images/favicon.png
-  visibilitychange: false
-  hidden: /failure.ico # Displays an icon when not visible
+  visibilitychange: false # Enable toggle title display when leaving | 开启离开时切换标题显示
+  hidden: /failure.ico
   show_text: favicon.show_text
   hide_text: favicon.hide_text
 
-# Theme resource files or plug-ins
+# Theme resource files or plug-ins | 插件配置
 assets:
-  # The cdn configuration of the js inside the theme
-  internal_provider: local
-  # cdn configuration of third-party js
-  third_party_provider: unpkg
-  # The plug-in used by the theme
-  plugin:
+  internal_provider: local # The cdn configuration of the js inside the theme | 主题脚本的 CDN 配置
+  third_party_provider: unpkg # cdn configuration of third-party js | 第三方插件 CDN 配置
+  plugin: # The plug-in used by the theme
     hexo_theme_async:
       rowcss: css/plugins/bootstrap.row.css
       typing: js/plugins/typing.js
       search: js/plugins/local_search.js
-			danmu: js/plugins/danmu.js
+      danmu: js/plugins/danmu.js
       main: js/main.js
-  # Icon configuration
-  icons: 
+  icons: # Icon configuration
     type: font # font symbol
     css:  //at.alicdn.com/t/c/font_3549054_n096xdrq7me.css
-    js:
+    js: # icon js
 
 # CDN User - defined plug-in
 cdn:
@@ -60,43 +56,28 @@ cdn:
     async: 
     defer: 
 
-# The icon used by the theme
+# The icon used by the theme | 主题图标
 icons:
-  # Theme switch icon
-  sun: iconfont icon-sun
-  moon: iconfont icon-moon
-  # Home video play
-  play: iconfont icon-play-circle
-  # email icon
-  email: iconfont icon-envelope
-  # Category entry icon
-  next: iconfont icon-arrow-alt-circle-rig
-  # Date of article details
-  calendar: iconfont icon-calendar-alt
-  # Article details time
-  clock: iconfont icon-clock
-  # Author of article details
-  user: iconfont icon-user1
-  # Return to the top icon
-  back_top: iconfont icon-arrow-alt-circle-up
-  # close icon
-  close: iconfont icon-times-circle
-  # search icon
-  search: iconfont icon-search
-  # reward icon
-  reward: iconfont icon-hand-holding-usd
-  # User information and article directory switch
-  user_tag: iconfont icon-user
-  toc_tag: iconfont icon-th-list
-  # Secure the button in the lower right corner
-  read: iconfont icon-book-reader
-  arrows: iconfont icon-arrows-alt-h
-  # Code highlight fold icon
-  double_arrows: iconfont icon-angle-double-down
-  # Code copy icon
-  copy: iconfont icon-copy
+  sun: iconfont icon-sun # Theme switch icon | 主题切换明亮图标
+  moon: iconfont icon-moon # Theme switch icon | 主题切换暗黑图标
+  play: iconfont icon-play-circle # Home video play | 首页播放按钮图标
+  email: iconfont icon-envelope # email icon | 邮件图标
+  next: iconfont icon-arrow-alt-circle-rig # Category entry icon | 分类卡片入口图标
+  calendar: iconfont icon-calendar-alt # Date of article details | 文章详情日期图标
+  clock: iconfont icon-clock # Article details time | 文章详情时间图标
+  user: iconfont icon-user1 # Author of article details | 文章详情作者图标
+  back_top: iconfont icon-arrow-alt-circle-up # Return to the top icon | 返回顶部图标
+  close: iconfont icon-times-circle # close icon | 关闭图标
+  search: iconfont icon-search # search icon | 查询图标
+  reward: iconfont icon-hand-holding-usd # reward icon | 打赏图标
+  user_tag: iconfont icon-user 
+  toc_tag: iconfont icon-th-list # toc icon | 目录图标
+  read: iconfont icon-book-reader # Secure the button in the lower right corner | 阅读模式图标
+  arrows: iconfont icon-arrows-alt-h # Single bar and double bar toggle icon | 单栏和双栏切换图标
+  double_arrows: iconfont icon-angle-double-down # Code highlight fold icon | 代码块折叠图标
+  copy: iconfont icon-copy # Code copy icon | 代码块复制图标
 
-# Top navigation menu
+# Top navigation menu | 导航栏  
 top_bars:
   - title: 主页
     url: /
@@ -107,12 +88,12 @@ top_bars:
   - title: 关于
     url: /about/
 
-# Banner settings
+# Banner settings | 横幅配置
 banner:
   use_cover: false
-	danmu: 
-		enable: false
-		el: .trm-banner
+  danmu: 
+    enable: false
+    el: .trm-banner
   default:
     type: img
     bgurl: https://s2.loli.net/2024/07/29/bUwSQrg95tfeiHN.jpg
@@ -128,14 +109,14 @@ banner:
     banner_title: 漫游者向清晨绿色的地带降落，<br>万物燃烧。
   links:
     type: img
-    bgurl: https://s2.loli.net/2025/03/29/jzxQqV5XBPZ1Dkt.jpg
+    bgurl: https://s2.loli.net/2025/06/08/pks4F3qCoMfDQrl.jpg
     banner_title: 并非因为信任才去了解，<br>而是因为想要信任、想要了解。
   about:
     type: img
     bgurl: https://s2.loli.net/2025/03/29/BmnrKGcloT3NSwa.jpg
     banner_title: FACE THE SIN, <br>SAVE THE E.G.O.
 
-# Sidebar settings
+# Sidebar settings | 侧栏
 sidebar:
   typed_text_prefix: 
   typed_text: [ '世事诡谲，谨致良知', '但行好事，莫问前程' ]
@@ -156,50 +137,51 @@ sidebar:
       icon: iconfont icon-github
       url: https://github.com/WangZai-ZZY
 
-# About page settings
+# About page settings | 关于页
 about:
-	insert: none # before | after | none
+  insert: none # before | after | none
   title: 在迷茫的时候，人应该顺着自己与现实的联系——无论那是一种生活，还是一种理想——去寻找方向。
   introduction: 
-    嗨！这里是<strong>汪崽zzy</strong>，欢迎光临我的博客🎉！
-    <br><br>
-    我一直觉得，标签只能降低交往的成本，无法真正触及一个人的内在。<br>
-    人与人之间的理解与关怀，是从承认对方行为具有正当性、触碰并接洽对方情感开始的。
-    <br><br>
-    所以，我选择了博客这一形式，希望通过文字这一载体，寄宿我的情感，向光临此地的访问者传达。
+    嗨！这里是<strong>汪崽zzy</strong>，欢迎光临我的博客🎉！<br>
+    <br>
+    我始终认为，标签只能降低交往的成本，无法真正触及一个人的内在。<br>
+    人与人之间的理解与关怀，是从承认对方行为具有正当性、触碰并接洽对方的情绪开始的。<br>
+    <br>
+    所以，我开设了自己的博客，希望通过文字这一载体，寄宿我的情感，向访问者传达。<br>
     无论你是否对我讲述的故事产生了兴趣，我都十分感谢你的到访——<br>
-    因为你的到来，才让这处僻静之地有了生机。
+    因为你的到来，才让这处静滞之地有了意义。
   blog: 
     <ul class="trm-list">
       <li>主页顶栏图：<a href="http://www.uchor.com/U/1024975">「四日火光节」-by. 狛纳世界</a></li>
       <li>归档顶栏图：<a href="https://hanyijie.lofter.com/post/d7b61_1cc897861">「艾雅法拉」-by. 韩一杰</a></li>
-      <li>链接顶栏图：<a href="https://x.com/gggggoou/status/1815365337795445176">by. gow</a></li>
+      <li>链接顶栏图：<a href="https://www.bilibili.com/opus/991046261720219664">「明日方舟 2024感谢庆典特别直播宣传图」</a></li>
       <li>链接顶栏图：<a href="https://x.com/paofannu/status/1900508030904758372">「阿米娅」by. paofannu</a></li>
     </ul>
 
-# Footer settings
+# Footer settings | 页脚
 footer:
   # Hexo link (Powered by Hexo).
-  powered:
+  powered: # 程序驱动信息
     enable: true
   # Beian icp information for Chinese users. In China, every legal website should have a beian icp in website footer.
   # https://beian.miit.gov.cn/
-  beian:
+  beian: # 备案信息
     enable: false
     icp: 
-  # Copyright date
-  copyright_year: 2020
-  # 
+  # Copyright date 版权日期
+  copyright_year: 2021
+  # 运行时间
   live_time:
     enable: false
     prefix: footer.tips
     start_time: 04/10/2022 17:00:00
-  #
+  # 自定义内容
   custom_text: Hosted by <a href="https://github.com" rel="noopener" target="_blank">&nbsp;Github Pages</a>
 
 # Here is a collection of articles related to configuration.
 #### Article configuration start ###
-# Reward (Donate)
+
+# Reward (Donate) | 打赏
 # If enable true, reward would be displayed in every posts and pages by default.
 # You can show or hide reward in a specific page throuth `reward: true | false` in Front Matter.
 reward:
@@ -208,7 +190,7 @@ reward:
   # url:
   methods:
 
-# Article table of contents
+# Article table of contents | 文章目录
 toc:
   enable: true
   list_number: true
@@ -216,7 +198,7 @@ toc:
   max_depth: 3
   min_depth: 1
 
-# Archive page
+# Archive page | 归档页
 archive:
   type: more # less more
 
@@ -232,21 +214,21 @@ creative_commons:
   post: false
   clipboard: false
 
-# Customize the cover image
+# Customize the cover image | 封面图
 cover:
   default: /images/block_default.jpg
   type: date # img || date || random
 
-# The previous and the next article
+# The previous and the next article | 上下篇文章
 post_pagination: 
   enable: true 
   type: small # large || small
 
-# img loading="lazy"
+# img loading="lazy" | 图片懒加载
 lazyload:
   enable: true
 
-# Displays outdated notice for a post (文章过期提醒)
+# Displays outdated notice for a post | 文章过期提醒
 notice_outdate:
   enable: false
   style: flat # style: simple/flat
@@ -287,15 +269,15 @@ comment:
       light: light
       dark: transparent_dark
 
-# Theme mode 
+# Theme mode | 主题模式
 theme: 
   switch: true 
   default: style-light # style-light style-dark
 
-# Service Worker
+# Service Worker | 渐进式应用
 sw: false
 
-# Post wordcount
+# Post wordcount | 字数统计
 # https://github.com/willin/hexo-wordcount
 wordcount:
   enable: false
@@ -312,7 +294,7 @@ katex:
   # In page katex options are also possible and will be merged
   options: {}
 
-# Blog search
+# Blog search | 搜索
 search:
   enable: false
   type: engine #local engine
@@ -323,10 +305,10 @@ search:
 
 # Think of swup as being pjax on steroids. The concepts are similar to those used in barba.js or other transition libraries.
 # https://swup.js.org/
-# Whether swup is enabled
+# Whether swup is enabled | Swup 插件
 swup: true
 
-# Datetime formatting
+# Datetime formatting | 日期格式化
 datetime_foramt:
   post_card:
     type: date # date || updated
@@ -343,23 +325,23 @@ datetime_foramt:
     date: YY/MM/DD
     time: HH:mm
 
-# Home page category card configuration
+# Home page category card configuration | 首页分类卡片
 categorie_card:
   enable: true
   len: 4
-  list: ["数码", "随笔", "呓语", "年度总结"]
+  list: ["笔记", "数码", "呓语", "年度总结"]
 
-# Lower right button
+# Lower right button | 功能按钮块
 rightside:
   readmode: true
   aside: true
 
-# Replace Broken Images 
+# Replace Broken Images | 破图时默认图片
 error_img:
   flink: /images/friend_404.gif
   post_page: /images/post_404.jpg
 
-# Code highlighting configuration
+# Code highlighting configuration | 代码高亮配置
 highlight:
   theme: true # 
   title: default # mac | default
@@ -368,7 +350,7 @@ highlight:
   code_word_wrap: fasle #
   height_limit: 200 # unit: px
 
-# Customize the template path
+# Customize the template path | 自定义模块
 layout:
   path: layout
   # layout
@@ -394,8 +376,8 @@ layout:
   paginator: _widget/paginator
   fixed_btn: _widget/fixed-btn
   post_toc: _widget/post-toc
-	about_card: _widget/about-card
-	search: _widget/search
+  about_card: _widget/about-card
+  search: _widget/search
   sidebar_user: _partial/sidebar/card/user
   sidebar_social: _partial/sidebar/card/social
   sidebar_info: _partial/sidebar/card/info
@@ -414,11 +396,12 @@ layout:
   page_links: _partial/page/links
   page_post: _partial/page/post
   page_tag: _partial/page/tag
-	# other
-	script: _partial/script
-	head: _partial/head
+  # other
+  script: _partial/script
+  head: _partial/head
 
+# 404 config | 404 配置
 not_found: 
-	path: /
-	name: not_found.name
-	text: not_found.text
+  path: /
+  name: not_found.name
+  text: not_found.text
